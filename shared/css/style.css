@@ -1,0 +1,22 @@
+body {
+  color: #484848;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background-color: #f8f8f8; }
+
+img {
+  display: block; }
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+/*# sourceMappingURL=style.css.map */

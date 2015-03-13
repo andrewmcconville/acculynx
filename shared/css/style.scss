@@ -1,0 +1,22 @@
+//globals
+@import 'colors';
+@import 'typography';
+
+body {
+	background-color: #f8f8f8;
+	//-webkit-tap-highlight-color: rgba(203, 221, 231, 1);
+}
+
+img {
+	display: block;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
