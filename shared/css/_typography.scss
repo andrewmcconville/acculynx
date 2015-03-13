@@ -1,8 +1,15 @@
 body {
 	color: $base-font;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 a {
+	color: $base-font;
 	text-decoration: none;
+}
+
+h1 {
+	font-size: 26px;
+	font-weight: 200;
+	line-height: 26px;
 }
