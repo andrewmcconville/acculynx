@@ -6,7 +6,7 @@ angular
 		$scope.questions = $scope.data.items;
 
 		// $http
-		// 	.get('https://api.stackexchange.com/2.2/questions?fromdate=1426118400&todate=1426204800&order=desc&sort=activity&site=stackoverflow&filter=!9YdnSCK0S')
+		// 	.get('/2.2/questions?order=desc&sort=creation&site=stackoverflow&filter=!9YdnSCK0S')
 		// 	.success(function(data, status, headers, config) {
 		// 		$scope.questions = data.items;
 		// 	})

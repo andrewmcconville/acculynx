@@ -1,6 +1,8 @@
 //globals
 @import 'colors';
 @import 'typography';
+//components
+@import '../../components/list/list'; 
 
 body {
 	background-color: #f8f8f8;

@@ -5,6 +5,19 @@ body {
 a {
   text-decoration: none; }
 
+.question-list {
+  margin: auto;
+  max-width: 500px; }
+
+.owner-image {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px; }
+
 body {
   background-color: #f8f8f8; }
 
