@@ -1,0 +1,52 @@
+.header {
+	background-color: $brand-dark;
+	color: #fff;
+}
+
+.header-inner {
+	margin: auto;
+	width: 480px;
+}
+
+.question-list {
+	margin: auto;
+	max-width: 480px;
+}
+
+.question {
+	background-color: #fff;
+	margin-bottom: 2px;
+	padding: 16px;
+}
+
+.owner-name {
+	font-size: 14px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.by-label{
+	opacity: .25;
+}
+
+.question-title {
+	margin: 12px 0 16px 0
+}
+
+.owner-image {
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 48px;
+	width: 48px;
+}
+
+.answer-count,
+.question-score {
+	float: left;
+}
+
+.links {
+	float: right;
+}
