@@ -1,0 +1,16 @@
+.badge {
+	background-color: rgba($brand-light, 1);
+	color: $brand-dark;
+	display: inline-block;
+	height: 24px;
+	line-height: 22px;
+	min-width: 24px;
+	padding: 0 8px;
+	text-align: right;
+}
+
+.badge-label {
+	font-size: 14px;
+	margin-right: 16px;
+	opacity: .5;
+}

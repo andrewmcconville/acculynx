@@ -1,23 +1,23 @@
 var app = angular.module('accuchallenge', ['ui.router', 'ngAnimate']);
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
-	$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/questions');
 
 	$stateProvider
 		/*
 		 * Home
 		 */
-		.state('list', {
-			url: '/',
-			templateUrl: 'components/list/list.html',
-        	controller: 'listCtrl'
+		.state('questions', {
+			url: '/questions',
+			templateUrl: 'components/questions/questionsTemplate.html',
+        	controller: 'questionsCtrl'
 		})
 		/*
 		 * Profile
 		 */
-		.state('list.user', {
+		.state('questions.user', {
 			url: '/user/:id',
-			templateUrl: 'components/user/user.html',
+			templateUrl: 'components/user/userTemplate.html',
         	controller: 'userCtrl'
 		})
 }]);

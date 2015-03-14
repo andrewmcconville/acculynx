@@ -1,8 +1,8 @@
 angular
 	.module('accuchallenge')
-	.controller('listCtrl', ['$scope', '$http', '$sce', '$stateParams', 'UserID', function($scope, $http, $sce, $stateParams, UserID) {
+	.controller('questionsCtrl', ['$scope', '$http', '$sce', '$stateParams', 'UserID', function($scope, $http, $sce, $stateParams, UserID) {
 		$http
-			.get('https://api.stackexchange.com/2.2/questions?pagesize=100&order=desc&sort=creation&site=stackoverflow&filter=!9YdnSCK0S')
+			.get('https://api.stackexchange.com/2.2/questions?pagesize=10&order=desc&sort=creation&site=stackoverflow&filter=!9YdnSCK0S')
 			.success(function(data, status, headers, config) {
 				$scope.questions = data.items;
 				$scope.reputationSum = $scope.getReputationSum();

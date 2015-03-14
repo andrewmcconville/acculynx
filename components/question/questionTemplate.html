@@ -1,0 +1,17 @@
+<p class="owner-name">{{question.owner.display_name}} <span class="by-label">posted:</span></p>
+
+<h1 class="question-title"><a href="{{question.link}}" ng-bind-html="question.title | toHTML"></a></h1>
+
+<div class="meta">
+    <p class="answer-count">
+        <span class="badge">{{question.answer_count}}</span>
+        <label class="badge-label">Answers</label>
+    </p>
+    <p class="question-score">
+        <span class="badge">{{question.score}}</span>
+        <label class="badge-label">Score</label>
+    </p>
+    <div class="links">
+        <a class="owner-link button-link" ui-sref=".user({id: question.owner.user_id})" ng-click="setUserID(question.owner.user_id)">User Info</a>
+    </div>
+</div>

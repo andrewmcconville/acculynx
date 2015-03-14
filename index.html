@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon image_src" href="apple-touch-icon.png">
     <title>AccuChallenge</title>
 
     <style>*{box-sizing:border-box;}body{margin:0;}a,button,input,select{outline: 0;}iframe,h1,h2,h3,h4,h5,h6,p,blockquote,a,abbr,acronym,address,cite,em,img,strong,sub,sup,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,figcaption,footer,header,menu,nav,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ol,ul{list-style:none}blockquote{quotes:none}blockquote:before,blockquote:after{content:none}table{border-collapse:collapse;border-spacing:0}</style>
@@ -15,20 +16,22 @@
     <link rel="stylesheet" type="text/css" href="shared/css/style.css">
 </head>
 
-<body> 
-    <div id="app-wrapper">
-        <div ui-view></div>
-    </div>
+<body>
+    <header>
+        Something
+    </header>
+    <div ui-view></div>
 
     <script src="shared/js/libs/angular.min.js"></script>
     <script src="shared/js/libs/angular-ui-router.min.js"></script>
     <script src="shared/js/libs/angular-animate.min.js"></script>
     <script src="shared/js/libs/fastclick.js"></script>
     <script src="shared/js/app.js"></script>
-    <script src="shared/js/app-filters.js"></script>
-    <script src="shared/js/app-services.js"></script>
-    <script src="components/list/listCtrl.js"></script>
-    <script src="components/user/userCtrl.js"></script>
+    <script src="shared/js/appFilters.js"></script>
+    <script src="shared/js/appServices.js"></script>
+    <script src="components/questions/questionsController.js"></script>
+    <script src="components/question/questionDirective.js"></script>
+    <script src="components/user/userController.js"></script>
     <script>
         if ('addEventListener' in document) {
             document.addEventListener('DOMContentLoaded', function() {
