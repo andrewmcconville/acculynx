@@ -15,9 +15,9 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 		/*
 		 * Profile
 		 */
-		.state('list.profile', {
-			url: '/profile',
-			templateUrl: 'components/profile/profile.html',
-        	controller: 'profileCtrl'
+		.state('list.user', {
+			url: '/user/:id',
+			templateUrl: 'components/user/user.html',
+        	controller: 'userCtrl'
 		})
 }]);
