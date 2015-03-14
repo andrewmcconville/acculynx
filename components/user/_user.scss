@@ -1,7 +1,7 @@
-.profile-view {
+.user-view {
 	background-color: rgba($brand-light, .8);
 	left: 0;
-	position: fixed;
+	position: absolute;
 	top: 0;
 
 	&.ng-enter {
@@ -14,7 +14,7 @@
 	}
 }
 
-.profile-modal {
+.user-modal {
 	bottom: 0;
 	height: 480px;
 	left: 0;
