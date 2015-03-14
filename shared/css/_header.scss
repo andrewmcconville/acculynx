@@ -1,16 +1,44 @@
-.badge {
-	background-color: rgba($brand-light, 1);
-	color: $brand-dark;
-	display: inline-block;
-	height: 24px;
-	line-height: 22px;
-	min-width: 24px;
-	padding: 0 8px;
-	text-align: right;
+.app-header {
+	background-color: rgba($brand-dark, .9375);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
+	color: #fff;
+	height: 80px;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	z-index: 10;
 }
 
-.badge-label {
-	font-size: 14px;
-	margin-right: 16px;
-	opacity: .5;
+.header-inner {
+	height: 100%;
+	position: relative;
+	margin: auto;
+	width: 480px;
+}
+
+.app-nav {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.tab {
+	border-bottom: 6px solid transparent;
+	color: #fff;
+	display: block;
+	float: left;
+	opacity: .75;
+	padding: 8px 0;
+	text-align: center;
+	text-transform: uppercase;
+	transition: border 500ms;
+	width: 50%;
+
+	&.active {
+		border-color: rgba(0, 0, 0, .25);
+		opacity: 1;
+		transition: border 300ms;
+	}
 }

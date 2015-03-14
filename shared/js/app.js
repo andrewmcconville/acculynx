@@ -20,4 +20,11 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
 			templateUrl: 'components/user/userTemplate.html',
         	controller: 'userCtrl'
 		})
+		/*
+		 * About
+		 */
+		.state('about', {
+			url: '/about',
+			templateUrl: 'components/about/aboutTemplate.html'
+		})
 }]);

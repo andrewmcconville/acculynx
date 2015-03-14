@@ -5,12 +5,19 @@
 @import 'badges';
 @import 'header';
 //components
-@import '../../components/questions/questionsStyle'; 
-@import '../../components/question/questionStyle'; 
-@import '../../components/user/userStyle'; 
+@import '../../components/questions/questionsStyle';
+@import '../../components/question/questionStyle';
+@import '../../components/user/userStyle';
+@import '../../components/about/aboutStyle';
+
+html {
+	overflow-x: hidden;
+	overflow-y: scroll; 
+}
 
 body {
 	background-color: $brand-light;
+	padding-top: 80px;
 }
 
 img {
@@ -25,4 +32,35 @@ img {
 
 .cf:after {
     clear: both;
+}
+
+.page-view {
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 80px;
+	transition: all 300ms;
+	width: 480px;
+	z-index: 1;
+
+	&.ng-enter {
+		opacity: 0;
+		//transform: translate3d(100%, 0, 0);
+	}
+
+	&.ng-enter-active {
+		opacity: 1;
+		//transform: translate3d(0, 0, 0);
+	}
+
+	&.ng-leave {
+		opacity: 1;
+		z-index: 0;
+	}
+
+	&.ng-leave-active {
+		opacity: 0;
+		z-index: 0;
+	}
 }

@@ -1,9 +1,7 @@
 ﻿<header class="header">
-    <div class="header-inner">
-        <p>High Score: <span ng-bind-html="highScore.title | toHTML"></span> ({{highScore.score}})</p>
-        <p>Reputation Sum: {{reputationSum}}</p>
-        <p>userID: {{userID}}</p>
-    </div>
+    <p>High Score: <span ng-bind-html="highScore.title | toHTML"></span> ({{highScore.score}})</p>
+    <p>Reputation Sum: {{reputationSum}}</p>
+    <p>userID: {{userID}}</p>
 </header>
 
 <ul class="question-list">
@@ -12,4 +10,4 @@
     </li>
 </ul>
 
-<div class="profile-view" ui-view></div>
+<!-- <div class="profile-view" ui-view></div> -->

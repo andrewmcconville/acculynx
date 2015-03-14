@@ -26,26 +26,69 @@ h1 {
   padding: 7px;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: all 150ms;
-          transition: all 150ms; }
+  transition: all 150ms; }
   .button-link:hover {
     background-color: rgba(135, 179, 152, 0.0625);
     border: 1px solid #87b398;
     opacity: 1;
-    -webkit-transition: all 150ms;
-            transition: all 150ms; }
+    transition: all 150ms; }
 
-.header {
-  background-color: #da500e;
-  color: #fff; }
+.badge {
+  background-color: #f6f1ea;
+  color: #da500e;
+  display: inline-block;
+  height: 24px;
+  line-height: 22px;
+  min-width: 24px;
+  padding: 0 8px;
+  text-align: right; }
+
+.badge-label {
+  font-size: 14px;
+  margin-right: 16px;
+  opacity: .5; }
+
+.app-header {
+  background-color: rgba(218, 80, 14, 0.9375);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+  color: #fff;
+  height: 80px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  z-index: 10; }
 
 .header-inner {
+  height: 100%;
+  position: relative;
   margin: auto;
   width: 480px; }
 
-.question-list {
-  margin: auto;
-  max-width: 480px; }
+.app-nav {
+  bottom: 0;
+  position: absolute;
+  width: 100%; }
+
+.tab {
+  border-bottom: 6px solid transparent;
+  color: #fff;
+  display: block;
+  float: left;
+  opacity: .75;
+  padding: 8px 0;
+  text-align: center;
+  text-transform: uppercase;
+  transition: border 500ms;
+  width: 50%; }
+  .tab.active {
+    border-color: rgba(0, 0, 0, 0.25);
+    opacity: 1;
+    transition: border 300ms; }
+
+.header {
+  padding: 16px; }
 
 .question {
   background-color: #fff;
@@ -62,7 +105,8 @@ h1 {
   opacity: .25; }
 
 .question-title {
-  margin: 12px 0 16px 0; }
+  margin: 12px 0 16px 0;
+  word-wrap: break-word; }
 
 .owner-image {
   background-position: center top;
@@ -78,31 +122,35 @@ h1 {
 .links {
   float: right; }
 
-.profile-view {
+.user-view {
   background-color: rgba(246, 241, 234, 0.8);
   left: 0;
-  position: fixed;
+  position: absolute;
   top: 0; }
-  .profile-view.ng-enter {
+  .user-view.ng-enter {
     bottom: 0;
     right: 0; }
-    .profile-view.ng-enter .profile-modal {
+    .user-view.ng-enter .profile-modal {
       opacity: 0; }
 
-.profile-modal {
+.user-modal {
   bottom: 0;
   height: 480px;
   left: 0;
   opacity: 1;
   position: absolute;
   right: 0;
-  -webkit-transition: all 1000ms;
-          transition: all 1000ms;
+  transition: all 1000ms;
   top: 0;
   width: 480px; }
 
+html {
+  overflow-x: hidden;
+  overflow-y: scroll; }
+
 body {
-  background-color: #f6f1ea; }
+  background-color: #f6f1ea;
+  padding-top: 80px; }
 
 img {
   display: block; }
@@ -115,19 +163,24 @@ img {
 .cf:after {
   clear: both; }
 
-.badge {
-  background-color: #f6f1ea;
-  color: #da500e;
-  display: inline-block;
-  height: 24px;
-  line-height: 22px;
-  min-width: 24px;
-  padding: 0 8px;
-  text-align: right; }
-
-.badge-label {
-  font-size: 14px;
-  margin-right: 16px;
-  opacity: .5; }
+.page-view {
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 80px;
+  transition: all 300ms;
+  width: 480px;
+  z-index: 1; }
+  .page-view.ng-enter {
+    opacity: 0; }
+  .page-view.ng-enter-active {
+    opacity: 1; }
+  .page-view.ng-leave {
+    opacity: 1;
+    z-index: 0; }
+  .page-view.ng-leave-active {
+    opacity: 0;
+    z-index: 0; }
 
 /*# sourceMappingURL=style.css.map */

@@ -17,10 +17,16 @@
 </head>
 
 <body>
-    <header>
-        Something
+    <header class="app-header">
+        <div class="header-inner">
+            <h1>Something</h1>
+            <nav class="app-nav cf">
+                <a class="tab" ui-sref-active="active" ui-sref=".questions">Questions</a>
+                <a class="tab" ui-sref-active="active" ui-sref=".about">About</a>
+            </nav>
+        </div>
     </header>
-    <div ui-view></div>
+    <div class="page-view" ui-view></div>
 
     <script src="shared/js/libs/angular.min.js"></script>
     <script src="shared/js/libs/angular-ui-router.min.js"></script>
