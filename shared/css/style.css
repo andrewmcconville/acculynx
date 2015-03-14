@@ -78,48 +78,28 @@ h1 {
 .links {
   float: right; }
 
-.header {
-  background-color: #da500e;
-  color: #fff; }
+.profile-view {
+  background-color: rgba(246, 241, 234, 0.8);
+  left: 0;
+  position: fixed;
+  top: 0; }
+  .profile-view.ng-enter {
+    bottom: 0;
+    right: 0; }
+    .profile-view.ng-enter .profile-modal {
+      opacity: 0; }
 
-.header-inner {
-  margin: auto;
+.profile-modal {
+  bottom: 0;
+  height: 480px;
+  left: 0;
+  opacity: 1;
+  position: absolute;
+  right: 0;
+  -webkit-transition: all 1000ms;
+          transition: all 1000ms;
+  top: 0;
   width: 480px; }
-
-.question-list {
-  margin: auto;
-  max-width: 480px; }
-
-.question {
-  background-color: #fff;
-  margin-bottom: 2px;
-  padding: 16px; }
-
-.owner-name {
-  font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
-.by-label {
-  opacity: .25; }
-
-.question-title {
-  margin: 12px 0 16px 0; }
-
-.owner-image {
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 48px;
-  width: 48px; }
-
-.answer-count,
-.question-score {
-  float: left; }
-
-.links {
-  float: right; }
 
 body {
   background-color: #f6f1ea; }

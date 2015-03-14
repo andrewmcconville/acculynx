@@ -1,6 +1,6 @@
 ﻿<header class="header">
     <div class="header-inner">
-        <p>High Score: {{highScore.title}} ({{highScore.score}})</p>
+        <p>High Score: <span ng-bind-html="highScore.title | toHTML"></span> ({{highScore.score}})</p>
         <p>Reputation Sum: {{reputationSum}}</p>
     </div>
 </header>
@@ -9,7 +9,7 @@
     <li class="question cf" ng-repeat="question in questions">        
             <p class="owner-name">{{question.owner.display_name}} <span class="by-label">posted:</span></p>
             
-            <h1 class="question-title"><a href="{{question.link}}">{{question.title}}</a></h1>
+            <h1 class="question-title"><a href="{{question.link}}" ng-bind-html="question.title | toHTML"></a></h1>
             
             <div class="meta">
                 <p class="answer-count">
@@ -31,4 +31,4 @@
     </li>
 </ul>
 
-<div ui-view></div>
+<div class="profile-view" ui-view></div>

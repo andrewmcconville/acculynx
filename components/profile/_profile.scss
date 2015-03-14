@@ -1,52 +1,27 @@
-.header {
-	background-color: $brand-dark;
-	color: #fff;
+.profile-view {
+	background-color: rgba($brand-light, .8);
+	left: 0;
+	position: fixed;
+	top: 0;
+
+	&.ng-enter {
+		bottom: 0;
+		right: 0;
+
+		.profile-modal {
+			opacity: 0;
+		}
+	}
 }
 
-.header-inner {
-	margin: auto;
-	width: 480px;
-}
-
-.question-list {
-	margin: auto;
-	max-width: 480px;
-}
-
-.question {
-	background-color: #fff;
-	margin-bottom: 2px;
-	padding: 16px;
-}
-
-.owner-name {
-	font-size: 14px;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-}
-
-.by-label{
-	opacity: .25;
-}
-
-.question-title {
-	margin: 12px 0 16px 0
-}
-
-.owner-image {
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 48px;
-	width: 48px;
-}
-
-.answer-count,
-.question-score {
-	float: left;
-}
-
-.links {
-	float: right;
+.profile-modal {
+	bottom: 0;
+	height: 480px;
+	left: 0;
+	opacity: 1;
+	position: absolute;
+	right: 0;
+	transition: all 1000ms;
+	top: 0;
+	width: 480px
 }
