@@ -5,10 +5,12 @@ body {
 a {
   color: #484848;
   text-decoration: none;
-  transition: all 150ms; }
+  -webkit-transition: all 150ms;
+          transition: all 150ms; }
   a:hover {
     color: #87b398;
-    transition: all 150ms; }
+    -webkit-transition: all 150ms;
+            transition: all 150ms; }
 
 .button-link {
   color: #87b398;
@@ -23,11 +25,13 @@ a {
   padding: 7px;
   text-align: center;
   text-transform: uppercase;
-  transition: all 150ms; }
+  -webkit-transition: all 150ms;
+          transition: all 150ms; }
   .button-link:hover {
     background-color: rgba(135, 179, 152, 0.0625);
     opacity: 1;
-    transition: all 150ms; }
+    -webkit-transition: all 150ms;
+            transition: all 150ms; }
 
 .badge {
   background-color: #f6f1ea;
@@ -53,7 +57,8 @@ a {
   position: fixed;
   right: 0;
   top: 0;
-  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   z-index: 10; }
 
 .header-inner {
@@ -76,18 +81,21 @@ a {
   padding: 8px 0;
   text-align: center;
   text-transform: uppercase;
-  transition: all 300ms;
+  -webkit-transition: all 300ms;
+          transition: all 300ms;
   width: 50%; }
   .tab:hover {
     background-color: rgba(255, 255, 255, 0.0625);
     border-color: rgba(0, 0, 0, 0.125);
     color: #fff;
     opacity: .875;
-    transition: all 300ms; }
+    -webkit-transition: all 300ms;
+            transition: all 300ms; }
   .tab.active {
     border-color: rgba(0, 0, 0, 0.25);
     opacity: 1;
-    transition: all 300ms; }
+    -webkit-transition: all 300ms;
+            transition: all 300ms; }
 
 .sidebar {
   opacity: .667;
@@ -159,27 +167,136 @@ a {
   float: right; }
 
 .user-view {
-  background-color: rgba(246, 241, 234, 0.8);
-  left: 0;
-  position: absolute;
-  top: 0; }
-  .user-view.ng-enter {
-    bottom: 0;
-    right: 0; }
-    .user-view.ng-enter .profile-modal {
-      opacity: 0; }
+  -webkit-transition: all 250ms;
+          transition: all 250ms;
+  z-index: 1; }
+  .user-view.ng-leave {
+    opacity: 1;
+    z-index: 0; }
+  .user-view.ng-leave-active {
+    opacity: 0;
+    z-index: 0; }
 
 .user-modal {
-  bottom: 0;
+  -webkit-animation: animation 1000ms linear both;
+          animation: animation 1000ms linear both;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
   height: 480px;
   left: 0;
+  margin: auto;
   opacity: 1;
-  position: absolute;
+  padding-top: 80px;
+  position: fixed;
   right: 0;
-  transition: all 1000ms;
   top: 0;
   width: 480px; }
 
+@-webkit-keyframes animation {
+  0% {
+    -webkit-transform: matrix3d(0.875, 0, 0, 0, 0, 0.875, 0, 0, 0, 0, 1, 0, 0, -300, 0, 1);
+            transform: matrix3d(0.875, 0, 0, 0, 0, 0.875, 0, 0, 0, 0, 1, 0, 0, -300, 0, 1); }
+  2.15% {
+    -webkit-transform: matrix3d(0.939, 0, 0, 0, 0, 0.939, 0, 0, 0, 0, 1, 0, 0, -220.221, 0, 1);
+            transform: matrix3d(0.939, 0, 0, 0, 0, 0.939, 0, 0, 0, 0, 1, 0, 0, -220.221, 0, 1); }
+  4.3% {
+    -webkit-transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, -145.719, 0, 1);
+            transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, -145.719, 0, 1); }
+  6.46% {
+    -webkit-transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, -83.567, 0, 1);
+            transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, -83.567, 0, 1); }
+  8.61% {
+    -webkit-transform: matrix3d(1.012, 0, 0, 0, 0, 1.012, 0, 0, 0, 0, 1, 0, 0, -36.424, 0, 1);
+            transform: matrix3d(1.012, 0, 0, 0, 0, 1.012, 0, 0, 0, 0, 1, 0, 0, -36.424, 0, 1); }
+  12.91% {
+    -webkit-transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 15.683, 0, 1);
+            transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 15.683, 0, 1); }
+  14.16% {
+    -webkit-transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 22.357, 0, 1);
+            transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 22.357, 0, 1); }
+  17.22% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 28, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 28, 0, 1); }
+  19.72% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 25.482, 0, 1);
+            transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 25.482, 0, 1); }
+  28.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.188, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.188, 0, 1); }
+  30.83% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.432, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.432, 0, 1); }
+  39.44% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.869, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.869, 0, 1); }
+  41.99% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.695, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.695, 0, 1); }
+  50% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.481, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.481, 0, 1); }
+  61.66% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.125, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.125, 0, 1); }
+  83.98% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+
+@keyframes animation {
+  0% {
+    -webkit-transform: matrix3d(0.875, 0, 0, 0, 0, 0.875, 0, 0, 0, 0, 1, 0, 0, -300, 0, 1);
+            transform: matrix3d(0.875, 0, 0, 0, 0, 0.875, 0, 0, 0, 0, 1, 0, 0, -300, 0, 1); }
+  2.15% {
+    -webkit-transform: matrix3d(0.939, 0, 0, 0, 0, 0.939, 0, 0, 0, 0, 1, 0, 0, -220.221, 0, 1);
+            transform: matrix3d(0.939, 0, 0, 0, 0, 0.939, 0, 0, 0, 0, 1, 0, 0, -220.221, 0, 1); }
+  4.3% {
+    -webkit-transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, -145.719, 0, 1);
+            transform: matrix3d(0.985, 0, 0, 0, 0, 0.985, 0, 0, 0, 0, 1, 0, 0, -145.719, 0, 1); }
+  6.46% {
+    -webkit-transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, -83.567, 0, 1);
+            transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, -83.567, 0, 1); }
+  8.61% {
+    -webkit-transform: matrix3d(1.012, 0, 0, 0, 0, 1.012, 0, 0, 0, 0, 1, 0, 0, -36.424, 0, 1);
+            transform: matrix3d(1.012, 0, 0, 0, 0, 1.012, 0, 0, 0, 0, 1, 0, 0, -36.424, 0, 1); }
+  12.91% {
+    -webkit-transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 15.683, 0, 1);
+            transform: matrix3d(1.005, 0, 0, 0, 0, 1.005, 0, 0, 0, 0, 1, 0, 0, 15.683, 0, 1); }
+  14.16% {
+    -webkit-transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 22.357, 0, 1);
+            transform: matrix3d(1.003, 0, 0, 0, 0, 1.003, 0, 0, 0, 0, 1, 0, 0, 22.357, 0, 1); }
+  17.22% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 28, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 28, 0, 1); }
+  19.72% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 25.482, 0, 1);
+            transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 25.482, 0, 1); }
+  28.33% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.188, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 6.188, 0, 1); }
+  30.83% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.432, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 2.432, 0, 1); }
+  39.44% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.869, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.869, 0, 1); }
+  41.99% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.695, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -1.695, 0, 1); }
+  50% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.481, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.481, 0, 1); }
+  61.66% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.125, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.125, 0, 1); }
+  83.98% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.008, 0, 1); }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
 html {
   overflow-x: hidden;
   overflow-y: scroll; }
@@ -205,7 +322,8 @@ img {
   left: 0;
   right: 0;
   top: 80px;
-  transition: all 300ms;
+  -webkit-transition: all 300ms;
+          transition: all 300ms;
   width: 480px;
   z-index: 1; }
   .page-view.ng-enter {

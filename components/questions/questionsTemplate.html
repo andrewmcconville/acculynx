@@ -11,7 +11,7 @@
 				<label class="inline-label">for:</label> {{highScore.score}} Points,
 			</span>
 			<span class="break-on-1024">
-				<label class="inline-label">tied with:</label> {{highScore.ties == 0 ? 'No One' : highScore.ties + ' Others'}}
+				<label class="inline-label">tied with:</label> {{highScore.ties == 0 ? 'No One!' : highScore.ties + ' Others'}}
 			</span>
 		</span>
  	</p>
@@ -25,4 +25,4 @@
     <li class="question cf" question ng-repeat="question in questions"></li>
 </ul>
 
-<!-- <div class="profile-view" ui-view></div> -->
+<div class="user-view" ui-view></div>
