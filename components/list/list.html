@@ -2,6 +2,7 @@
     <div class="header-inner">
         <p>High Score: <span ng-bind-html="highScore.title | toHTML"></span> ({{highScore.score}})</p>
         <p>Reputation Sum: {{reputationSum}}</p>
+        <p>userID: {{userID}}</p>
     </div>
 </header>
 
@@ -21,7 +22,7 @@
                     <label class="badge-label">Score</label>
                 </p>
                 <div class="links">
-                    <a class="owner-link button-link" ui-sref=".profile">User Info</a>
+                    <a class="owner-link button-link" ui-sref=".profile" ng-click="setUserID(question.owner.user_id)">User Info</a>
                 </div>
             </div>
 
