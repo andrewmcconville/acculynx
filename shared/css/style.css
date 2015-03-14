@@ -4,16 +4,13 @@ body {
 
 a {
   color: #484848;
-  text-decoration: none; }
-
-h1 {
-  font-size: 26px;
-  font-weight: 200;
-  line-height: 26px; }
+  text-decoration: none;
+  transition: all 150ms; }
+  a:hover {
+    color: #87b398;
+    transition: all 150ms; }
 
 .button-link {
-  border: 1px solid transparent;
-  border-radius: 14px;
   color: #87b398;
   cursor: pointer;
   display: inline-block;
@@ -29,7 +26,6 @@ h1 {
   transition: all 150ms; }
   .button-link:hover {
     background-color: rgba(135, 179, 152, 0.0625);
-    border: 1px solid #87b398;
     opacity: 1;
     transition: all 150ms; }
 
@@ -46,7 +42,7 @@ h1 {
 .badge-label {
   font-size: 14px;
   margin-right: 16px;
-  opacity: .5; }
+  opacity: .25; }
 
 .app-header {
   background-color: rgba(218, 80, 14, 0.9375);
@@ -80,15 +76,52 @@ h1 {
   padding: 8px 0;
   text-align: center;
   text-transform: uppercase;
-  transition: border 500ms;
+  transition: all 300ms;
   width: 50%; }
+  .tab:hover {
+    background-color: rgba(255, 255, 255, 0.0625);
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #fff;
+    opacity: .875;
+    transition: all 300ms; }
   .tab.active {
     border-color: rgba(0, 0, 0, 0.25);
     opacity: 1;
-    transition: border 300ms; }
+    transition: all 300ms; }
 
-.header {
+.sidebar {
+  opacity: .667;
   padding: 16px; }
+  @media (min-width: 1024px) {
+    .sidebar {
+      border-left: 4px solid rgba(0, 0, 0, 0.125);
+      left: 500px;
+      padding: 16px 0 16px 16px;
+      position: absolute;
+      top: 90px;
+      width: 240px; } }
+
+@media (min-width: 1024px) {
+  .break-on-1024 {
+    display: block; } }
+
+.label {
+  display: block;
+  font-size: 14px;
+  margin-top: 16px;
+  opacity: .75; }
+
+.inline-label {
+  font-size: 14px;
+  opacity: .75; }
+
+.data {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 100%; }
+
+.questions {
+  padding-bottom: 32px; }
 
 .question {
   background-color: #fff;
@@ -105,6 +138,9 @@ h1 {
   opacity: .25; }
 
 .question-title {
+  font-size: 26px;
+  font-weight: 200;
+  line-height: 26px;
   margin: 12px 0 16px 0;
   word-wrap: break-word; }
 

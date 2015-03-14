@@ -1,6 +1,6 @@
 .button-link {
-	border: 1px solid transparent;
-	border-radius: 14px;
+	//border: 1px solid transparent;
+	//border-radius: 14px;
 	color: $brand-secondary-dark;
 	cursor: pointer;
 	display: inline-block;
@@ -17,7 +17,7 @@
 
 	&:hover {
 		background-color: rgba($brand-secondary-dark, .0625);
-		border: 1px solid $brand-secondary-dark;
+		//border: 1px solid $brand-secondary-dark;
 		opacity: 1;
 		transition: all 150ms;
 	}

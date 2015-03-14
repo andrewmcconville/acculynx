@@ -1,3 +1,41 @@
-.header {
+.sidebar {
+	opacity: .667;
 	padding: 16px;
+
+	@media(min-width: 1024px) {
+		border-left: 4px solid rgba(0, 0, 0, .125);
+		left: 500px;
+		padding: 16px 0 16px 16px;
+		position: absolute;
+		top: 90px;
+		width: 240px;
+	}
+}
+
+.break-on-1024 {
+	@media(min-width: 1024px) {
+		display: block;
+	}
+}
+
+.label {
+	display: block;
+	font-size: 14px;
+	margin-top: 16px;
+	opacity: .75;
+}
+
+.inline-label {
+	font-size: 14px;
+	opacity: .75;
+}
+
+.data {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 100%;
+}
+
+.questions {
+	padding-bottom: 32px;
 }

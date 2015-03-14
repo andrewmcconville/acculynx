@@ -1,13 +1,28 @@
-﻿<header class="header">
-    <p>High Score: <span ng-bind-html="highScore.title | toHTML"></span> ({{highScore.score}})</p>
-    <p>Reputation Sum: {{reputationSum}}</p>
-    <p>userID: {{userID}}</p>
-</header>
+﻿<aside class="sidebar">
+	<h1 class="heading">Recent Questions Meta:</h1>
+    <p>
+		<label class="label">Highest Scoring:</label>
+		<span class="data">
+			"<span ng-bind-html="highScore.title | toHTML"></span>"
+			<span class="break-on-1024">
+				<label class="inline-label">by:</label> {{highScore.owner}},
+			</span>
+			<span class="break-on-1024">
+				<label class="inline-label">for:</label> {{highScore.score}} Points,
+			</span>
+			<span class="break-on-1024">
+				<label class="inline-label">tied with:</label> {{highScore.ties == 0 ? 'No One' : highScore.ties + ' Others'}}
+			</span>
+		</span>
+ 	</p>
+    <p>
+    	<label class="label">Reputation Sum:</label>
+    	<span class="data">{{reputationSum | number}}</span>
+    </p>
+</aside>
 
-<ul class="question-list">
-    <li class="question cf" question ng-repeat="question in questions">        
-       
-    </li>
+<ul class="questions">
+    <li class="question cf" question ng-repeat="question in questions"></li>
 </ul>
 
 <!-- <div class="profile-view" ui-view></div> -->

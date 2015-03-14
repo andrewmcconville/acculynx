@@ -33,12 +33,20 @@
 	padding: 8px 0;
 	text-align: center;
 	text-transform: uppercase;
-	transition: border 500ms;
+	transition: all 300ms;
 	width: 50%;
+
+	&:hover {
+		background-color: rgba(#ffffff, .0625);
+		border-color: rgba(0, 0, 0, .125);
+		color: #fff;
+		opacity: .875;
+		transition: all 300ms;
+	}
 
 	&.active {
 		border-color: rgba(0, 0, 0, .25);
 		opacity: 1;
-		transition: border 300ms;
+		transition: all 300ms;
 	}
 }

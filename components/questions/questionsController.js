@@ -15,11 +15,17 @@ angular
 			var highScore = {};
 				highScore.score = questions[0].score;
 				highScore.title = questions[0].title;
+				highScore.owner = questions[0].owner.display_name;
+				highScore.ties = 0;
 
 			for(var i = 0; i < questions.length; i++){
 				if(questions[i].score > highScore.score) {
 					highScore.score = questions[i].score;
 					highScore.title = questions[i].title;
+					highScore.owner = questions[i].owner.display_name;
+					highScore.ties = 0;
+				} else if(questions[i].score == highScore.score) {
+					highScore.ties++;
 				}
 			}
 
