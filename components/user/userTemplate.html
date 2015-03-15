@@ -1,12 +1,12 @@
 ﻿<div class="user-modal">
 	<header class="profile-header">
 		<div class="background-blur" style="background-image: url({{user.profile_image}})"></div>
-		<p class="user-name">{{user.display_name}}</p>
+		<p class="user-name">{{user.display_name || 'User Name'}}</p>
 		<div class="profile-image" style="background-image: url({{user.profile_image}})"></div>
 	</header>
 	<div class="profile-body">
 		<p class="user-rep cf">
-			{{user.reputation | number}}
+			{{user.reputation || 0 | number}}
 			<label class="profile-label">Rep</label>
 			<span ng-if="user.recentBadge.name">
 				<span class="profile-label">|</span>

@@ -1,9 +1,14 @@
 angular
 	.module('accuchallenge')
-    .factory('UserID', function(){
-    	var id;
+    .factory('User', function(){
+    	var currentUser = {};
 
     	return {
-    		id: '0'
+    		setUser: function(user){
+    			currentUser = user;
+    		},
+    		getUser: function(){
+    			return currentUser
+    		}
     	}
     });
