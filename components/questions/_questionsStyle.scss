@@ -1,11 +1,13 @@
 .sidebar {
 	opacity: .667;
 	padding: 16px;
+}
 
+.question-meta {
 	@media(min-width: 1024px) {
 		border-left: 4px solid rgba(0, 0, 0, .125);
 		left: 500px;
-		padding: 16px 0 16px 16px;
+		padding: 16px;
 		position: absolute;
 		top: 90px;
 		width: 240px;
@@ -37,5 +39,7 @@
 }
 
 .questions {
-	padding-bottom: 32px;
+	@media(min-width: 1024px){
+		padding-bottom: 32px;
+	}
 }

@@ -34,7 +34,11 @@
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 480px
+	width: 100%;
+
+	@media(min-width: 480px){
+		width: 480px;
+	}
 }
 
 @keyframes animation { 
@@ -86,8 +90,12 @@
 	text-overflow: ellipsis;
 	text-shadow: 0 0 16px rgba(255, 255, 255, 1);
 	top: 56px;
-	width: 320px;
+	width: 180px;
 	white-space: nowrap;
+
+	@media(min-width: 480px){
+		width: 320px;;
+	}
 }
 
 .profile-body {
@@ -97,6 +105,11 @@
 .user-rep {
 	position: relative;
 	margin-top: -8px;
+	width: 180px;
+
+	@media(min-width: 480px){
+		width: auto;
+	}
 }
 
 .profile-image {
@@ -110,8 +123,12 @@
 	height: 100px;
 	margin: auto;
 	position: absolute;
-	right: 40px;
+	right: 20px;
 	width: 100px;
+
+	@media(min-width: 480px){
+		right: 40px;
+	}
 }
 
 .profile-label {

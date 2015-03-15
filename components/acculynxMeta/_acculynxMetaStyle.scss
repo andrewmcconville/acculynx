@@ -1,0 +1,39 @@
+.acculynx-meta {
+	padding-bottom: 32px;
+	
+	@media(min-width: 1024px) {
+		border-left: 4px solid rgba(0, 0, 0, .125);
+		bottom: 80px;
+		left: 500px;
+		padding: 16px;
+		position: absolute;
+		width: 240px;
+	}
+}
+
+.employee {
+	float: left;
+	line-height: 16px;
+	padding: 8px;
+	width: 50%;
+
+	@media(min-width: 1024px){
+		float: none;
+		width: auto;
+	}
+
+	&:hover {
+		background-color: #ffffff;
+		cursor: pointer;
+	}
+
+	&:nth-child(1) {
+		@media(min-width: 1024px){
+			margin-top: 8px;
+		}
+	}
+
+	.inline-label {
+		cursor: pointer;
+	}
+}

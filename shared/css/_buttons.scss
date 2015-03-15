@@ -1,24 +1,39 @@
-.button-link {
-	//border: 1px solid transparent;
-	//border-radius: 14px;
+.button {
+	appearance: none;
+	border: none;
 	color: $brand-secondary-dark;
 	cursor: pointer;
-	display: inline-block;
 	font-size: 12px;
 	font-weight: 600;
-	height: 28px;
 	line-height: 14px;
-	min-width: 100px;
-	opacity: .5;
-	padding: 7px;
-	text-align: center;
 	text-transform: uppercase;
 	transition: all 150ms;
 
 	&:hover {
-		background-color: rgba($brand-secondary-dark, .0625);
-		//border: 1px solid $brand-secondary-dark;
-		opacity: 1;
 		transition: all 150ms;
+	}
+}
+
+.button-primary {
+	background-color: rgba(#ffffff, .75);
+	border: 1px solid $brand-secondary-dark;
+	padding: 8px 12px;
+
+	&:hover {
+		background-color: rgba(#ffffff, 1);
+	}
+}
+
+.button-link {
+	display: inline-block;
+	height: 28px;
+	min-width: 100px;
+	opacity: .5;
+	padding: 7px;
+	text-align: center;
+
+	&:hover {
+		background-color: rgba($brand-secondary-dark, .0625);
+		opacity: 1;
 	}
 }
