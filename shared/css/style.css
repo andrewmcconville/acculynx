@@ -178,11 +178,11 @@ a {
     z-index: 0; }
 
 .user-modal {
-  -webkit-animation: animation 1000ms linear both;
-          animation: animation 1000ms linear both;
+  -webkit-animation: animation 2000ms linear both;
+          animation: animation 2000ms linear both;
   background-color: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  height: 480px;
+  height: 520px;
   left: 0;
   margin: auto;
   opacity: 1;
@@ -297,6 +297,80 @@ a {
   100% {
     -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
             transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
+.profile-header {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.125);
+  height: 120px;
+  position: relative; }
+
+.background-blur {
+  background-position: center top;
+  background-size: cover;
+  height: 200px;
+  -webkit-filter: blur(32px);
+          filter: blur(32px);
+  left: 0;
+  opacity: .5;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: -80px;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  z-index: 0; }
+
+.user-name {
+  font-size: 30px;
+  left: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: ellipses;
+  text-shadow: 0 0 16px white;
+  top: 76px;
+  width: 320px;
+  white-space: nowrap; }
+
+.user-rep {
+  position: relative; }
+
+.profile-image {
+  background-position: center top;
+  background-size: cover;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  bottom: -50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.125);
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  right: 40px;
+  width: 100px; }
+
+.badges {
+  padding: 16px; }
+
+.profile-badge {
+  border-radius: 16px;
+  float: left;
+  font-size: 12px;
+  margin: 3px 2px; }
+
+.rank {
+  border-radius: 50%;
+  display: inline-block;
+  height: 8px;
+  margin-right: 4px;
+  margin-top: -2px;
+  width: 8px; }
+
+.gold {
+  background-color: #ffcc00; }
+
+.silver {
+  background-color: #c5c5c5; }
+
+.bronze {
+  background-color: #cc9966; }
+
 html {
   overflow-x: hidden;
   overflow-y: scroll; }

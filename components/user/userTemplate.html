@@ -1,3 +1,15 @@
 ﻿<div class="user-modal">
-    <p>Name: {{user.display_name}}</p>
+	<header class="profile-header">
+		<div class="background-blur" style="background-image: url({{user.profile_image}})"></div>
+		<p class="user-name">{{user.display_name}}</p>
+		<p class="user-rep">Rep: {{user.reputation}}</p>
+		<div class="profile-image" style="background-image: url({{user.profile_image}})"></div>
+	</header>
+	<p>Recent Badge: {{user.recentBadge.name}} {{user.recentBadge.rank}}</p>
+	<p>Six Months Ago: {{user.pastBadges.length}}</p>
+	<ul class="badges cf">
+		<li class="badge profile-badge" ng-repeat="badge in user.pastBadges | orderBy:'-rank'">
+			<span class="rank {{badge.rank}}"></span>{{badge.name}}
+		</li>
+	</ul>
 </div>
