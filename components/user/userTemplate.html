@@ -1,7 +1,9 @@
 ﻿<div class="user-modal">
 	<header class="profile-header">
 		<div class="background-blur" style="background-image: url({{user.profile_image}})"></div>
-		<p class="user-name">{{user.display_name || 'User Name'}}</p>
+		<p class="user-name">
+			<a href="{{user.link}}" target="_blank">{{user.display_name || 'User Name'}}</a>
+		</p>
 		<div class="profile-image" style="background-image: url({{user.profile_image}})"></div>
 	</header>
 	<div class="profile-body">

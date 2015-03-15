@@ -1,5 +1,5 @@
 .user-view {
-	transition: all 250ms;
+	transition: all 16ms;
 	z-index: 1;
 
 	&.ng-enter {
@@ -135,7 +135,7 @@
 }
 
 .past-badges {
-	margin-top: 24px;
+	margin-top: 8px;
 }
 
 .rank {

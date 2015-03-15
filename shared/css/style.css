@@ -167,8 +167,8 @@ a {
   float: right; }
 
 .user-view {
-  -webkit-transition: all 250ms;
-          transition: all 250ms;
+  -webkit-transition: all 16ms;
+          transition: all 16ms;
   z-index: 1; }
   .user-view.ng-leave {
     opacity: 1;
@@ -366,7 +366,7 @@ a {
   float: none; }
 
 .past-badges {
-  margin-top: 24px; }
+  margin-top: 8px; }
 
 .rank {
   border-radius: 50%;
