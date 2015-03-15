@@ -6,7 +6,7 @@
 	</header>
 	<div class="profile-body">
 		<p class="user-rep cf">
-			{{user.reputation}}
+			{{user.reputation | number}}
 			<label class="profile-label">Rep</label>
 			<span ng-if="user.recentBadge.name">
 				<span class="profile-label">|</span>
