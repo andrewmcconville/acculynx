@@ -36,8 +36,9 @@ angular
 			return reputationSum;
 		};
 		
-		//Service to save user id for getting more user info
+		//Service to save user id for getting more user info later
 		$scope.setUserID = function(userID){
+			$scope.userID = userID;
 			UserID.id = userID;
 		}
 
@@ -50,7 +51,7 @@ angular
 		} else {
 			//Live data from stack api
 			$http
-				.get('https://api.stackexchange.com/2.2/questions?key=BUjfiSIkQl1FhTfwx0UNqA((&order=desc&sort=creation&site=stackoverflow&filter=!.FjwP0I.XfjJedi7B5TMyB4MFtB(n')
+				.get('https://api.stackexchange.com/2.2/questions/?order=desc&sort=creation&site=stackoverflow&filter=!.FjwP0I.XfjJedi7B5TMyB4MFtB(n&key=BUjfiSIkQl1FhTfwx0UNqA((')
 				.success(function(data, status, headers, config) {
 					$scope.questions = data.items;
 					$scope.reputationSum = $scope.getReputationSum(data.items);
