@@ -2,14 +2,25 @@
 	<header class="profile-header">
 		<div class="background-blur" style="background-image: url({{user.profile_image}})"></div>
 		<p class="user-name">{{user.display_name}}</p>
-		<p class="user-rep">Rep: {{user.reputation}}</p>
 		<div class="profile-image" style="background-image: url({{user.profile_image}})"></div>
 	</header>
-	<p>Recent Badge: {{user.recentBadge.name}} {{user.recentBadge.rank}}</p>
-	<p>Six Months Ago: {{user.pastBadges.length}}</p>
-	<ul class="badges cf">
-		<li class="badge profile-badge" ng-repeat="badge in user.pastBadges | orderBy:'-rank'">
-			<span class="rank {{badge.rank}}"></span>{{badge.name}}
-		</li>
-	</ul>
+	<div class="profile-body">
+		<p class="user-rep cf">
+			{{user.reputation}}
+			<label class="profile-label">Rep</label>
+			<span>|</span>
+			<label class="profile-label">Last Badge:</label>
+			<span class="badge profile-badge last-badge">
+				<span class="rank {{user.recentBadge.rank}}"></span>{{user.recentBadge.name}}
+			</span>
+		</p>
+		<p class="past-badges cf">
+			{{user.pastBadges.length}} <label class="profile-label">badges earned six monthes ago:</label>
+		</p>
+		<ul class="badges cf">
+			<li class="badge profile-badge" ng-repeat="badge in user.pastBadges | orderBy:'-rank'">
+				<span class="rank {{badge.rank}}"></span>{{badge.name}}
+			</li>
+		</ul>
+	</div>
 </div>

@@ -299,13 +299,13 @@ a {
             transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } }
 .profile-header {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.125);
-  height: 120px;
+  height: 100px;
   position: relative; }
 
 .background-blur {
   background-position: center top;
   background-size: cover;
-  height: 200px;
+  height: 180px;
   -webkit-filter: blur(32px);
           filter: blur(32px);
   left: 0;
@@ -325,12 +325,16 @@ a {
   position: absolute;
   text-overflow: ellipses;
   text-shadow: 0 0 16px white;
-  top: 76px;
+  top: 56px;
   width: 320px;
   white-space: nowrap; }
 
+.profile-body {
+  padding: 16px; }
+
 .user-rep {
-  position: relative; }
+  position: relative;
+  margin-top: -8px; }
 
 .profile-image {
   background-position: center top;
@@ -345,14 +349,17 @@ a {
   right: 40px;
   width: 100px; }
 
-.badges {
-  padding: 16px; }
-
 .profile-badge {
   border-radius: 16px;
   float: left;
   font-size: 12px;
   margin: 3px 2px; }
+
+.last-badge {
+  float: none; }
+
+.past-badges {
+  margin-top: 24px; }
 
 .rank {
   border-radius: 50%;
