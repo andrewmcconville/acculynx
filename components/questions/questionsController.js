@@ -3,7 +3,7 @@ angular
 	.controller('questionsCtrl', ['$scope', '$http', '$sce', '$stateParams', 'UserID', function($scope, $http, $sce, $stateParams, UserID) {
 
 		//true uses local data, false uses stack api
-		var isDebugging = true;
+		var isDebugging = false;
 
 		$scope.getHighScore = function(questions){
 			var highScore = {};

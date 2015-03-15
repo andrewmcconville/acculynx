@@ -26,8 +26,7 @@
 .user-modal {
 	animation: animation 2000ms linear both;
 	background-color: #fff;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .25);
-	height: 520px;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .125);
 	left: 0;
 	margin: auto;
 	opacity: 1;
@@ -84,7 +83,7 @@
 	left: 12px;
 	overflow: hidden;
 	position: absolute;
-	text-overflow: ellipses;
+	text-overflow: ellipsis;
 	text-shadow: 0 0 16px rgba(255, 255, 255, 1);
 	top: 56px;
 	width: 320px;
@@ -115,6 +114,12 @@
 }
 
 .profile-label {
+	font-size: 14px;
+	opacity: .5;
+}
+
+.badges {
+	margin: 0 -4px;
 }
 
 .profile-badge {

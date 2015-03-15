@@ -181,8 +181,7 @@ a {
   -webkit-animation: animation 2000ms linear both;
           animation: animation 2000ms linear both;
   background-color: #fff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
-  height: 520px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.125);
   left: 0;
   margin: auto;
   opacity: 1;
@@ -323,7 +322,7 @@ a {
   left: 12px;
   overflow: hidden;
   position: absolute;
-  text-overflow: ellipses;
+  text-overflow: ellipsis;
   text-shadow: 0 0 16px white;
   top: 56px;
   width: 320px;
@@ -348,6 +347,13 @@ a {
   position: absolute;
   right: 40px;
   width: 100px; }
+
+.profile-label {
+  font-size: 14px;
+  opacity: .5; }
+
+.badges {
+  margin: 0 -4px; }
 
 .profile-badge {
   border-radius: 16px;

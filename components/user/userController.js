@@ -5,20 +5,20 @@ angular
 		var sixMonthsAgo = Date.now() - 15768000000;
 		sixMonthsAgo = sixMonthsAgo.toString().slice(0, 10);
 
-		$scope.user = {"badge_counts":{"bronze":32,"silver":14,"gold":1},"reputation":970,"user_id":162034,"display_name":"Constant M","profile_image":"http://i.stack.imgur.com/VG5pY.jpg?s=128&g=1"};
-		$scope.user.recentBadge = {"award_count":16,"rank":"bronze","name":"Popular Question"};
-		$scope.user.pastBadges = [{"award_count":17,"rank":"silver","name":"Notable Question"},{"award_count":42,"rank":"bronze","name":"Popular Question"},{"award_count":1,"rank":"gold","name":"Famous Question"},{"award_count":12,"rank":"bronze","name":"Nice Question"},{"award_count":1,"rank":"silver","name":"Inquisitive"},{"award_count":1,"rank":"gold","name":"Socratic"},{"award_count":1,"rank":"bronze","name":"Curious"},{"award_count":1,"rank":"bronze","name":"Organizer"},{"award_count":1,"rank":"bronze","name":"Custodian"},{"award_count":3,"rank":"silver","name":"Yearling"},{"award_count":1,"rank":"bronze","name":"Peer Pressure"},{"award_count":1,"rank":"bronze","name":"Citizen Patrol"},{"award_count":1,"rank":"bronze","name":"Self-Learner"},{"award_count":1,"rank":"silver","name":"Civic Duty"},{"award_count":1,"rank":"bronze","name":"Cleanup"},{"award_count":1,"rank":"bronze","name":"Tumbleweed"},{"award_count":1,"rank":"bronze","name":"Quorum"},{"award_count":1,"rank":"bronze","name":"Teacher"},{"award_count":1,"rank":"bronze","name":"Critic"},{"award_count":1,"rank":"bronze","name":"Commentator"},{"award_count":1,"rank":"bronze","name":"Editor"},{"award_count":1,"rank":"bronze","name":"Supporter"},{"award_count":1,"rank":"bronze","name":"Scholar"},{"award_count":1,"rank":"bronze","name":"Student"}];
+		// $scope.user = {"badge_counts":{"bronze":32,"silver":14,"gold":1},"reputation":970,"user_id":162034,"display_name":"Constant M","profile_image":"http://i.stack.imgur.com/VG5pY.jpg?s=128&g=1"};
+		// $scope.user.recentBadge = {"award_count":16,"rank":"bronze","name":"Popular Question"};
+		// $scope.user.pastBadges = [{"award_count":17,"rank":"silver","name":"Notable Question"},{"award_count":42,"rank":"bronze","name":"Popular Question"},{"award_count":1,"rank":"gold","name":"Famous Question"},{"award_count":12,"rank":"bronze","name":"Nice Question"},{"award_count":1,"rank":"silver","name":"Inquisitive"},{"award_count":1,"rank":"gold","name":"Socratic"},{"award_count":1,"rank":"bronze","name":"Curious"},{"award_count":1,"rank":"bronze","name":"Organizer"},{"award_count":1,"rank":"bronze","name":"Custodian"},{"award_count":3,"rank":"silver","name":"Yearling"},{"award_count":1,"rank":"bronze","name":"Peer Pressure"},{"award_count":1,"rank":"bronze","name":"Citizen Patrol"},{"award_count":1,"rank":"bronze","name":"Self-Learner"},{"award_count":1,"rank":"silver","name":"Civic Duty"},{"award_count":1,"rank":"bronze","name":"Cleanup"},{"award_count":1,"rank":"bronze","name":"Tumbleweed"},{"award_count":1,"rank":"bronze","name":"Quorum"},{"award_count":1,"rank":"bronze","name":"Teacher"},{"award_count":1,"rank":"bronze","name":"Critic"},{"award_count":1,"rank":"bronze","name":"Commentator"},{"award_count":1,"rank":"bronze","name":"Editor"},{"award_count":1,"rank":"bronze","name":"Supporter"},{"award_count":1,"rank":"bronze","name":"Scholar"},{"award_count":1,"rank":"bronze","name":"Student"}];
 
-		// $http
-		// 	.get('https://api.stackexchange.com/2.2/users/' + UserID.id + '?order=desc&sort=reputation&site=stackoverflow&filter=!)scTwB6npCehacZxV2A6&key=BUjfiSIkQl1FhTfwx0UNqA((')
-		// 	.success(function(data, status, headers, config) {
-		// 		$scope.user = data.items[0];
-		// 		if($scope.user.badge_counts.bronze > 0 || $scope.user.badge_counts.silver > 0 || $scope.user.badge_counts.gold > 0 ){
-		// 			getPastAndPresentBadges();
-		// 		}
-		// 	})
-		// 	.error(function(data, status, headers, config) {
-		// 	});
+		$http
+			.get('https://api.stackexchange.com/2.2/users/' + UserID.id + '?order=desc&sort=reputation&site=stackoverflow&filter=!)scTwB6npCehacZxV2A6&key=BUjfiSIkQl1FhTfwx0UNqA((')
+			.success(function(data, status, headers, config) {
+				$scope.user = data.items[0];
+				if($scope.user.badge_counts.bronze > 0 || $scope.user.badge_counts.silver > 0 || $scope.user.badge_counts.gold > 0 ){
+					getPastAndPresentBadges();
+				}
+			})
+			.error(function(data, status, headers, config) {
+			});
 
 		/*
 		 * These two extra calls seem unnecessary
