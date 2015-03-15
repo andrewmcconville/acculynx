@@ -3,10 +3,9 @@ angular
 	.controller('userCtrl', ['$scope', '$http', '$stateParams', 'User', function($scope, $http, $stateParams, User) {
 		
 		//true uses local data, false uses stack api
-		var isDebugging = false;
+		var isDebugging = true;
 		
-		var sixMonthsAgo = Date.now() - 15768000000;
-		sixMonthsAgo = sixMonthsAgo.toString().slice(0, 10);
+		var sixMonthsAgo = (Date.now() - 15768000000).toString().slice(0, 10);
 
 		if(isDebugging) {
 			$scope.user = User.getUser();
