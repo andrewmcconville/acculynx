@@ -1,16 +1,9 @@
 .user-view {
 	transition: all 16ms;
-	z-index: 1;
 
-	&.ng-enter {
-		//opacity: 0;
-		//transform: translate3d(100%, 0, 0);
-	}
+	&.ng-enter {}
 
-	&.ng-enter-active {
-		//opacity: 1;
-		//transform: translate3d(0, 0, 0);
-	}
+	&.ng-enter-active {}
 
 	&.ng-leave {
 		opacity: 1;
@@ -23,6 +16,41 @@
 	}
 }
 
+.tool-bar {
+	background-color: $brand-dark;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .125);
+	height: 60px;
+	left: 0;
+	margin: auto;
+	padding-top: 20px; 
+	position: fixed;
+	right: 0;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	width: 100%;
+	z-index: 20;
+
+	@media(min-width: 480px){
+		width: 480px;
+	}
+}
+
+.button-dismiss {
+	color: rgba(#ffffff, .9375);
+	cursor: pointer;
+	display: block;
+	padding: 0 16px;
+	position: relative;
+	text-transform: uppercase;
+	transform: translate3d(0, 0, 0);
+	width: 100%;
+	z-index: 1;
+
+	&:hover {
+	color: rgba(#ffffff, 1);
+	}
+}
+
 .user-modal {
 	animation: animation 2000ms linear both;
 	background-color: #fff;
@@ -30,11 +58,12 @@
 	left: 0;
 	margin: auto;
 	opacity: 1;
-	padding-top: 80px;
 	position: fixed;
 	right: 0;
-	top: 0;
+	top: -40px;
+	transform: translate3d(0, 0, 0);
 	width: 100%;
+	z-index: 1;
 
 	@media(min-width: 480px){
 		width: 480px;
@@ -63,52 +92,37 @@
 
 .profile-header {
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .125);
-	height: 100px;
+	height: 180px;
 	position: relative;
 }
 
 .background-blur {
 	background-position: center top;
 	background-size: cover;
-	height: 180px;
+	height: 100%;
 	filter: blur(32px);
 	left: 0;
 	opacity: .5;
 	overflow: hidden;
 	position: absolute;
 	right: 0;
-	top: -80px;
 	transform: translate3d(0, 0, 0);
 	z-index: 0;
 }
 
 .user-name {
+	bottom: 0;
 	font-size: 30px;
 	left: 12px;
 	overflow: hidden;
 	position: absolute;
 	text-overflow: ellipsis;
 	text-shadow: 0 0 16px rgba(255, 255, 255, 1);
-	top: 56px;
 	width: 180px;
 	white-space: nowrap;
 
 	@media(min-width: 480px){
 		width: 320px;;
-	}
-}
-
-.profile-body {
-	padding: 16px;
-}
-
-.user-rep {
-	position: relative;
-	margin-top: -8px;
-	width: 180px;
-
-	@media(min-width: 480px){
-		width: auto;
 	}
 }
 
@@ -128,6 +142,20 @@
 
 	@media(min-width: 480px){
 		right: 40px;
+	}
+}
+
+.profile-body {
+	padding: 16px;
+}
+
+.user-rep {
+	position: relative;
+	margin-top: -8px;
+	width: 180px;
+
+	@media(min-width: 480px){
+		width: auto;
 	}
 }
 
