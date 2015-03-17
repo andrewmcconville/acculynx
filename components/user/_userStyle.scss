@@ -1,19 +1,13 @@
 .user-view {
-	transition: all 160ms;
+	transition: all 0ms;
 
-	&.ng-enter {}
+	&.ng-enter { }
 
-	&.ng-enter-active {}
+	&.ng-enter-active { }
 
-	&.ng-leave {
-		opacity: 1;
-		z-index: 0;
-	}
+	&.ng-leave { }
 
-	&.ng-leave-active {
-		opacity: 0;
-		z-index: 0;
-	}
+	&.ng-leave-active { }
 }
 
 .tool-bar {
