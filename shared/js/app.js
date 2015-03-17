@@ -1,7 +1,7 @@
 var app = angular.module('accuchallenge', ['ui.router', 'ngAnimate']);
 
 app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
-	$urlRouterProvider.otherwise('/questions');
+	$urlRouterProvider.when('/questions/user/', '/questions').otherwise('/questions');
 
 	$stateProvider
 		.state('questions', {
@@ -10,7 +10,7 @@ app.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider,
         	controller: 'questionsCtrl'
 		})
 		.state('questions.user', {
-			url: '/user/:id',
+			url: '/user/:user_id',
 			templateUrl: 'components/user/userTemplate.html',
         	controller: 'userCtrl'
 		})
