@@ -3,7 +3,7 @@ body {
   font-family: 'Titillium Web', sans-serif; }
 
 a {
-  color: #484848;
+  color: #407354;
   text-decoration: none;
   -webkit-transition: all 150ms;
           transition: all 150ms; }
@@ -92,6 +92,7 @@ a {
   border-bottom: 6px solid transparent;
   color: #fff;
   display: block;
+  height: 100%;
   float: left;
   opacity: .75;
   padding: 15px 0;
@@ -195,7 +196,6 @@ a {
   height: 60px;
   left: 0;
   margin: auto;
-  padding-top: 20px;
   position: fixed;
   right: 0;
   top: 0;
@@ -211,7 +211,8 @@ a {
   color: rgba(255, 255, 255, 0.9375);
   cursor: pointer;
   display: block;
-  padding: 0 16px;
+  height: 100%;
+  padding: 18px 16px;
   position: relative;
   text-transform: uppercase;
   -webkit-transform: translate3d(0, 0, 0);
@@ -374,6 +375,8 @@ a {
   @media (min-width: 480px) {
     .user-name {
       width: 320px; } }
+  .user-name a {
+    color: #484848; }
 
 .profile-image {
   background-color: #fff;
@@ -467,6 +470,46 @@ a {
       margin-top: 8px; } }
   .employee .inline-label {
     cursor: pointer; }
+
+.about-page {
+  background-color: #fff;
+  line-height: 22px;
+  padding: 48px 32px; }
+  .about-page section {
+    margin-bottom: 48px; }
+  .about-page p {
+    margin-bottom: 12px; }
+  .about-page ol {
+    list-style-type: decimal;
+    margin-bottom: 8px;
+    padding-left: 36px; }
+    .about-page ol ol {
+      list-style-type: lower-alpha;
+      margin-bottom: 0;
+      padding-left: 24px; }
+      .about-page ol ol ol {
+        list-style-type: lower-roman; }
+        .about-page ol ol ol ol {
+          list-style-type: decimal; }
+  .about-page .directory-list ul {
+    border-left: 1px solid #e8e8e8;
+    margin-left: 4px;
+    padding-left: 24px; }
+
+.about-header {
+  font-size: 32px;
+  font-weight: 200;
+  line-height: 26px;
+  margin: 0 0 16px 0; }
+
+.about-sub-header {
+  font-size: 24px;
+  font-weight: 200;
+  margin: 0 -1px 8px -1px; }
+
+.git-link {
+  font-size: 12px;
+  font-weight: 600; }
 
 html {
   overflow-x: hidden;

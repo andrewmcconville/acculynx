@@ -1,16 +1,129 @@
-﻿<div>
-	andrew
-	email linkedin portfolio
-		who (am i)
-			designer coder
-			bio
-		why (did i build this)
-			angular and css3
-			stackoverflow api
-			google material inspired
-		where (is the source)
-			github
-		what (is it)
-			acculynx requirements
-			file structure
+﻿<div class="about-page">
+	<h1 class="about-header">AccuLynx Coding Challenge</h1>
+	<section>
+		<a href="https://github.com/andrewmcconville/acculynx" class="git-link">github.com/andrewmcconville/acculynx</a>
+	</section>
+	<section>
+		<h2 class="about-sub-header">The Task</h2>
+		<p>Create a website that consumes the Stackoverflow.com API for recent question activity and display information about them.</p>
+		<p>From the Recent Questions:</p>
+		<ol>
+			<li>Display the title of the question with the highest score</li>
+			<li>Display the sum of the reputation for all users in that request</li>
+			<li>Display a list of all the Recent Questions. Show:</li>
+			<ol>
+				<li>The user who asked the question</li>
+				<ol>
+					<li>Gravatar</li></li>
+					<li>Most recent badge</li>
+					<li>Number of badges the user had 6 months ago</li>
+					<ol>
+						<li>Display the badge totals grouped by rank</li>
+					</ol>
+				</ol>
+				<li>Title</li>
+				<li>Link to the actual stackoverflow question</li>
+				<li>Number of answers submitted</li>
+				<li>Total score</li>
+			</ol>
+		</ol>
+		<p>Upload your solution to a public repository on github.com and send us the link.</p>
+		<p>Bonus: Use git from the beginning to have a full commit history</p>
+	</section>
+	<section>
+		<h2 class="about-sub-header">What I Used</h2>
+		<ul>
+		<li>
+			<a href="https://angularjs.org/">Angular</a>:
+			For code organization
+		</li>
+		<li>
+			<a href="https://docs.angularjs.org/api/ngAnimate">ngAnimate</a>:
+			To animate routes
+		</li>
+		<li>
+			<a href="https://github.com/angular-ui/ui-router">AngularUI Router</a>:
+			For nested states and routes
+		</li>
+		<li>
+			<a href="https://github.com/ftlabs/fastclick">FastClick</a>:
+			To remove the 300ms delay on mobile
+		</li>
+		<li>
+			<a href="https://api.stackexchange.com/">Stack Exchange API</a>:
+			For the data
+		</li>
+		<li>
+			<a href="http://bouncejs.com/">Bouncejs</a>:
+			To generate complex CSS3 animations
+		</li>
+		<li>
+			<a href="https://www.google.com/fonts#UsePlace:use/Collection:Titillium+Web">Google Fonts</a>:
+			For the Titillium Web font
+		</li>
+		<ul>
+	</section>
+	<section>
+		<h2 class="about-sub-header">How I organized</h2>
+		<ul class="directory-list">
+			<li>components</li>
+			<ul>
+				<li>about</li>
+				<ul>
+					<li>_about.scss</li>
+					<li>aboutTemplate.html</li>
+				</ul>
+				<li>acculynxMeta</li>
+				<ul>
+					<li>_acculynxMetaStyle.scss</li>
+					<li>acculynxMetaDirective.js</li>
+					<li>acculynxMetaTemplate.html</li>
+				</ul>
+				<li>question</li>
+				<ul>
+					<li>_questionStyle.scss</li>
+					<li>questionDirective.js</li>
+					<li>questionTemplate.html</li>
+				</ul>
+				<li>questions</li>
+				<ul>
+					<li>_questionsStyle.scss</li>
+					<li>questionsController.js</li>
+					<li>questionsTemplate.html</li>
+				</ul>
+				<li>user</li>
+				<ul>
+					<li>_userStyle.scss</li>
+					<li>userController.js</li>
+					<li>userTemplate.html</li>
+				</ul>
+			</ul>
+			<li>shared</li>
+			<ul>
+				<li>css</li>
+					<ul>
+						<li>_badges.scss</li>
+						<li>_buttons.scss</li>
+						<li>_colors.scss</li>
+						<li>_header.scss</li>
+						<li>_typography.scss</li>
+						<li>style.scss</li>
+					</ul>
+				<li>js</li>
+					<ul>
+						<li>libs</li>
+						<ul>
+							<li>angular.js</li>
+							<li>angular-animate.js</li>
+							<li>angular-ui-router.js</li>
+							<li>fastclick.js</li>
+						</ul>
+						<li>app.js</li>
+						<li>appFilters.js</li>
+						<li>appServices.js</li>
+					</ul>
+			</ul>
+			index.html
+		</ul>
+	</section>
 </div>

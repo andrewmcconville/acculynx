@@ -1,0 +1,59 @@
+.about-page {
+	background-color: #fff;
+	line-height: 22px;
+	padding: 48px 32px;
+
+	section {
+		margin-bottom: 48px;
+	}
+
+	p {
+		margin-bottom: 12px;
+	}
+
+	ol {
+		list-style-type: decimal;
+		margin-bottom: 8px;
+		padding-left: 36px;
+
+		ol {
+			list-style-type: lower-alpha;
+			margin-bottom: 0;
+			padding-left: 24px;
+
+			ol {
+				list-style-type: lower-roman;
+
+				ol {
+					list-style-type: decimal;
+				}
+			}
+		}
+	}
+
+	.directory-list {
+		ul {
+			border-left: 1px solid #e8e8e8;
+			margin-left: 4px;
+			padding-left: 24px;
+		}
+	}
+}
+
+.about-header {
+	font-size: 32px;
+	font-weight: 200;
+	line-height: 26px;
+	margin: 0 0 16px 0;
+}
+
+.about-sub-header {
+	font-size: 24px;
+	font-weight: 200;
+	margin: 0 -1px 8px -1px;
+}
+
+.git-link {
+	font-size: 12px;
+	font-weight: 600;
+}
