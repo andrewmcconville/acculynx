@@ -1,17 +1,17 @@
 angular
 	.module('accuchallenge')
-	.controller('userCtrl', ['$scope', '$http', '$stateParams', 'User', 'Questions', function($scope, $http, $stateParams, User, Questions) {
+	.controller('userCtrl', ['$scope', '$http', '$stateParams', 'Users', function($scope, $http, $stateParams, Users) {
 		//true uses local data, false uses stack api
-		var isDebugging = true;
+		var isDebugging = false;
 		
 		var sixMonthsAgo = (Date.now() - 15768000000).toString().slice(0, 10);
 
 		$scope.getUser = function(user_id){
-			var index = Questions.getQuestions().map(
-					function(thing){ return thing.owner.user_id; }
+			var index = Users.getUsers().map(
+					function(users){ return users.user_id; }
 				).indexOf(user_id);
 			
-			return Questions.getQuestions()[index].owner;
+			return Users.getUsers()[index]	;
 		};
 		
 		$scope.user = $scope.getUser(parseInt($stateParams.user_id));

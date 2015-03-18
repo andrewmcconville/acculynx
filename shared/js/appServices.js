@@ -1,26 +1,14 @@
 angular
 	.module('accuchallenge')
-    .factory('User', function(){
-        var currentUser = {};
+    .factory('Users', function(){
+        var users = [];
 
         return {
-            setUser: function(user){
-                currentUser = user;
+            setUsers: function(uArray){
+                users = users.concat(uArray);
             },
-            getUser: function(){
-                return currentUser
-            }
-        }
-    })
-    .factory('Questions', function(){
-        var questions = [];
-
-        return {
-            setQuestions: function(qArray){
-                questions = qArray;
-            },
-            getQuestions: function(){
-                return questions
+            getUsers: function(){
+                return users
             }
         }
     });

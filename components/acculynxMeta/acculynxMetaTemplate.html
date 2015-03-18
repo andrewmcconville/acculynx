@@ -1,7 +1,7 @@
 ﻿<div ng-show="acculynx.length > 0">
 	<h3 class="heading">AccuLynx Meta:</h3>
 	<ul class="cf">
-		<li class="employee" ng-repeat="employee in acculynx" ui-sref=".user({id: employee.user_id})" ng-click="setUser(employee)">
+		<li class="employee" ng-repeat="employee in acculynx" ui-sref=".user({user_id: employee.user_id})" ng-click="setUser(employee)">
 			<p>{{employee.display_name}}</p>
 			<p>
 				<span class="rank gold"></span><label class="inline-label">{{employee.badge_counts.gold | number}}</label>
