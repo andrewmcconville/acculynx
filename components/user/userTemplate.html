@@ -27,7 +27,7 @@
 			{{user.pastBadges.length || '0'}} <label class="profile-label">badges earned six monthes ago<span ng-if="user.pastBadges.length">:</span></label>
 		</p>
 		<ul class="badges cf">
-			<li class="badge profile-badge" ng-repeat="badge in user.pastBadges | orderBy:'-rank'">
+			<li class="badge profile-badge" ng-repeat="badge in user.pastBadges | sortRank">
 				<span class="rank {{badge.rank}}"></span>
 				<span ng-bind-html="badge.name | toHTML"></span>
 			</li>
