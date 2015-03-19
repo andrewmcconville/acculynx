@@ -28,7 +28,8 @@
 		</p>
 		<ul class="badges cf">
 			<li class="badge profile-badge" ng-repeat="badge in user.pastBadges | orderBy:'-rank'">
-				<span class="rank {{badge.rank}}"></span>{{badge.name}}
+				<span class="rank {{badge.rank}}"></span>
+				<span ng-bind-html="badge.name | toHTML"></span>
 			</li>
 		</ul>
 	</div>
