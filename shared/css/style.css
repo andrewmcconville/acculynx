@@ -349,18 +349,33 @@ a {
   height: 180px;
   position: relative; }
 
-.background-blur {
+.background {
   background-position: center top;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  -webkit-filter: blur(32px);
-          filter: blur(32px);
   left: 0;
-  opacity: .5;
   overflow: hidden;
   position: absolute;
   right: 0;
   z-index: 0; }
+
+.background-mobile {
+  background-image: url(../../components/user/assets/userBackground.jpg); }
+  @media (min-width: 1024px) {
+    .background-mobile {
+      display: none; } }
+
+.background-blur {
+  display: none; }
+  @media (min-width: 1024px) {
+    .background-blur {
+      display: block;
+      -webkit-filter: blur(32px);
+              filter: blur(32px);
+      opacity: .5;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); } }
 
 .user-name {
   bottom: 0;
