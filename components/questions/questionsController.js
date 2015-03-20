@@ -2,7 +2,7 @@ angular
 	.module('accuchallenge')
 	.controller('questionsCtrl', ['$scope', '$http', '$sce', '$stateParams', 'Users', function($scope, $http, $sce, $stateParams, Users) {
 		//true uses local data, false uses stack api
-		var isDebugging = false;
+		var isDebugging = true;
 
 		$scope.getHighScore = function(questions){
 			var highScore = {};

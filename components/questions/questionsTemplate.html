@@ -24,7 +24,7 @@
 </aside>
 
 <ul class="questions">
-    <li class="question cf" question ng-repeat="question in questions"></li>
+    <li class="question cf" question ng-repeat="question in questions" ng-init="open = false" ng-click="open = !open" ng-class="{open: open}"></li>
 </ul>
 
 <aside class="sidebar acculynx-meta" acculynx-meta></aside>
