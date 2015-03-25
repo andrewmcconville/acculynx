@@ -45,7 +45,7 @@ angular
 		} else {
 			//Live data from stack api
 			$http
-				.get('https://api.stackexchange.com/2.2/questions/?pagesize=100&order=desc&sort=creation&site=stackoverflow&filter=!4y_4z.h_mb5SWrcNcs(5-pP3c2iwOVODJ5G_8j')
+				.get('https://api.stackexchange.com/2.2/questions/?pagesize=100&order=desc&sort=creation&site=stackoverflow&filter=!4y_4z.h_mb5SWrcNcs(5-pP3c2iwOVODJ5G_8j&key=BUjfiSIkQl1FhTfwx0UNqA((')
 				.success(function(data, status, headers, config) {
 					$scope.questions = data.items;
 					Users.setUsers(data.items.map(function(questions){return questions.owner;}));

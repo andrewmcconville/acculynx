@@ -1,11 +1,11 @@
 <div class="question-content">
     <header class="header cf">
         <p class="owner-name">{{question.owner.display_name}} <span class="by-label">posted:</span></p>
-        <h2 class="question-title"><a href="{{question.link}}" ng-bind-html="question.title | toHTML" target="_blank"></a></h2>
-
+        <h2 class="question-title" ng-bind-html="question.title | toHTML" target="_blank"></h2>
     </header>
     <section class="body">
-        <p>Can somebody tell me why the value returned is 3 and not 8. Doesn't the return x statement from the addFive method change the value of x in the main method?</p>
+        <p ng-bind-html="question.body_markdown | toHTML"></p>
+        <div class="fade-out"></div>
     </section>
     <section class="counts">
         <p class="count-wrapper">
@@ -43,6 +43,7 @@
     </section>
     <footer class="footer cf">
         <div class="links">
+            <a class="button button-link" href="{{question.link}}" target="_blank">View More</a>
             <a class="owner-link button button-link" ui-sref=".user({user_id: question.owner.user_id})" ng-click="$event.stopPropagation()">User Info</a>
         </div>
     </footer>

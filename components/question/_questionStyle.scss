@@ -4,11 +4,10 @@
 	min-height: 135px;
 	padding: 16px;
 	position: relative;
-	transition: all 300ms;
 	z-index: 0;
 
 	&.open {
-		z-index: 10;
+		z-index: 1;
 	}
 }
 
@@ -19,31 +18,76 @@
 
 .header {
 	margin-left: 72px;
-	transition: all 300ms ease-out;
+	transition: transform 300ms ease-out;
 }
 
 .open {
 	.header {
-		transition: all 300ms ease-out;
+		transition: transform 300ms ease-out;
 		transform: translate3d(0, -20px, 0);
 	}
 }
 
 .body {
 	height: 0px;
+	margin-left: 72px;
+	opacity: 0;
 	overflow: hidden;
+	position: absolute;
 	transition: all 300ms ease-out;
+	word-break: break-word;
+
+	p {
+		height: 240px;
+	}
+}
+
+.open {
+	.body {
+		height: 240px;
+		opacity: 1;
+		transition: all 300ms ease-out;
+		transform: translate3d(0, -20px, 0);
+	}
+}
+
+.counts {
+	left: 0;
+	position: absolute;
+	top: 0;
+	transition: transform 300ms ease-out;
+	width: 48px
+}
+
+.open {
+	.counts {
+		transition: transform 300ms ease-out;
+		transform: translate3d(-6px, -20px, 0);
+	}
 }
 
 .footer {
-	transition: all 300ms ease-out;
+	transition: transform 300ms ease-out;
 }
 
 .open {
 	.footer {
-		transition: all 300ms ease-out;
+		transition: transform 300ms ease-out;
 		transform: translate3d(0, 20px, 0);
 	}
+}
+
+.fade-out {
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	width: 100%;
 }
 
 .question-expanded-background {
@@ -55,7 +99,8 @@
 	right: 0;
 	top: -40px;
 	transition: all 300ms;
-	transform: scale(.8, .1);
+	transform: scale(.92, .3);
+	transform-origin: 50% 12%;
 	width: 520px;
 	z-index: 0;
 }
@@ -84,26 +129,12 @@
 
 .question-title {
 	clear: both;
+	color: $brand-secondary-darker;
 	font-size: 26px;
 	font-weight: 200;
 	line-height: 26px;
 	padding: 12px 0 24px 0;
 	word-wrap: break-word;
-}
-
-.owner-image {
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 48px;
-	width: 48px;
-}
-
-.counts {
-	left: 0;
-	position: absolute;
-	top: 0;
-	width: 48px
 }
 
 .count-wrapper {

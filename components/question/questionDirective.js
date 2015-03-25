@@ -6,9 +6,8 @@ angular
 			templateUrl: 'components/question/questionTemplate.html',
 			controller: function($scope, $http){
 				$scope.getQuestionDetails = function(question_id){
-					console.log(question_id);
 					$http
-						.get('https://api.stackexchange.com/2.2/questions/' + question_id + '?order=desc&sort=activity&site=stackoverflow&filter=!)EhwLl5m317MQfNCekjP.ikK.cUmeo5J)8iEFyX4(3G9nIUwl')
+						.get('https://api.stackexchange.com/2.2/questions/' + question_id + '?order=desc&sort=activity&site=stackoverflow&filter=!OfZM.T6pvVtBAPT94fBuKPDiszL)y8*0u)Irg3Ey2Pu&key=BUjfiSIkQl1FhTfwx0UNqA((')
 						.success(function(data, status, headers, config) {
 							$scope.question.is_answered = data.items[0].is_answered;
 							$scope.question.view_count = data.items[0].view_count;
@@ -16,6 +15,7 @@ angular
 							$scope.question.favorite_count = data.items[0].favorite_count;
 							$scope.question.up_vote_count = data.items[0].up_vote_count;
 							$scope.question.down_vote_count = data.items[0].down_vote_count;
+							$scope.question.body_markdown = data.items[0].body_markdown;
 						})
 						.error(function(data, status, headers, config) {
 						});
