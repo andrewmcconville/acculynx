@@ -1,21 +1,51 @@
 <div class="question-content">
-    <p class="owner-name">{{question.owner.display_name}} <span class="by-label">posted:</span></p>
+    <header class="header cf">
+        <p class="owner-name">{{question.owner.display_name}} <span class="by-label">posted:</span></p>
+        <h2 class="question-title"><a href="{{question.link}}" ng-bind-html="question.title | toHTML" target="_blank"></a></h2>
 
-    <h2 class="question-title"><a href="{{question.link}}" ng-bind-html="question.title | toHTML" target="_blank"></a></h2>
-
-    <div class="meta">
-        <p class="answer-count">
-            <span class="badge">{{question.answer_count}}</span>
-            <label class="badge-label">Answers</label>
+    </header>
+    <section class="body">
+        <p>Can somebody tell me why the value returned is 3 and not 8. Doesn't the return x statement from the addFive method change the value of x in the main method?</p>
+    </section>
+    <section class="counts">
+        <p class="count-wrapper">
+            <span class="count">{{question.answer_count}}</span>
+            <label class="count-label">Answers</label>
         </p>
-        <p class="question-score">
-            <span class="badge">{{question.score}}</span>
-            <label class="badge-label">Score</label>
+        <p class="count-wrapper">
+            <span class="count">{{question.score}}</span>
+            <label class="count-label">Score</label>
         </p>
+        <p class="count-wrapper" ng-show="open">
+            <span class="count">{{question.is_answered}}</span>
+            <label class="count-label">Answered</label>
+        </p>
+        <p class="count-wrapper" ng-show="open">
+            <span class="count">{{question.view_count}}</span>
+            <label class="count-label">Views</label>
+        </p>
+        <p class="count-wrapper" ng-show="open">
+            <span class="count">{{question.comment_count}}</span>
+            <label class="count-label">Comments</label>
+        </p>
+        <p class="count-wrapper" ng-show="open">
+            <span class="count">{{question.favorite_count}}</span>
+            <label class="count-label">Fav's</label>
+        </p>
+        <p class="count-wrapper" ng-show="open">
+            <span class="count">{{question.up_vote_count}}</span>
+            <label class="count-label">+Votes</label>
+        </p>
+        <p class="count-wrapper" ng-show="open">
+            <span class="count">{{question.down_vote_count}}</span>
+            <label class="count-label">-Votes</label>
+        </p>
+    </section>
+    <footer class="footer cf">
         <div class="links">
-            <a class="owner-link button button-link" ui-sref=".user({user_id: question.owner.user_id})">User Info</a>
+            <a class="owner-link button button-link" ui-sref=".user({user_id: question.owner.user_id})" ng-click="$event.stopPropagation()">User Info</a>
         </div>
-    </div>
+    </footer>
 </div>
 
 <div class="question-expanded-background"></div>

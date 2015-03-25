@@ -25,7 +25,8 @@
 }
 
 .button-link {
-	background-color: transparent;
+	background-color: rgba($brand-secondary-dark, .0625);
+	border: 1px solid rgba($brand-secondary-dark, .125);
 	display: inline-block;
 	height: 28px;
 	min-width: 100px;
@@ -34,7 +35,8 @@
 	text-align: center;
 
 	&:hover {
-		background-color: rgba($brand-secondary-dark, .0625);
+		background-color: rgba($brand-secondary-dark, .125);
+		border: 1px solid rgba($brand-secondary-dark, .25);
 		opacity: 1;
 	}
 }
