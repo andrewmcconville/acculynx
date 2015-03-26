@@ -1,12 +1,22 @@
 .question {
 	background-color: #fff;
+	cursor: pointer;
 	margin-bottom: 2px;
 	min-height: 135px;
 	padding: 16px;
 	position: relative;
+	transition: z-index 300ms;
 	z-index: 0;
 
 	&.open {
+		z-index: 1;
+	}
+
+	&.open-add {
+		z-index: 1;
+	}
+
+	&.open-remove {
 		z-index: 1;
 	}
 }
@@ -36,15 +46,10 @@
 	position: absolute;
 	transition: all 300ms ease-out;
 	word-break: break-word;
-
-	p {
-		height: 240px;
-	}
 }
 
 .open {
 	.body {
-		height: 240px;
 		opacity: 1;
 		transition: all 300ms ease-out;
 		transform: translate3d(0, -20px, 0);
@@ -73,7 +78,7 @@
 .open {
 	.footer {
 		transition: transform 300ms ease-out;
-		transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 0, 0);
 	}
 }
 
@@ -92,15 +97,15 @@
 
 .question-expanded-background {
 	background-color: #fff;
-	height: 100%;
+	height: 520px;
 	left: -20px;
 	margin: auto;
 	position: absolute;
 	right: 0;
 	top: -40px;
 	transition: all 300ms;
-	transform: scale(.92, .3);
-	transform-origin: 50% 12%;
+	transform: scale(.92, .2875);
+	transform-origin: 50% 56px;
 	width: 520px;
 	z-index: 0;
 }
@@ -140,6 +145,40 @@
 .count-wrapper {
 	height: 48px;
 	text-align: center;
+
+	&.ng-hide-remove {
+		opacity: 0;
+		transition: all 300ms ease-out;
+		transform: translate3d(-24px, 0, 0);
+
+		&:nth-child(3) { transition-delay: 32ms; }
+		&:nth-child(4) { transition-delay: 64ms; }
+		&:nth-child(5) { transition-delay: 96ms; }
+		&:nth-child(6) { transition-delay: 128ms; }
+		&:nth-child(7) { transition-delay: 160ms; }
+		&:nth-child(8) { transition-delay: 192ms; }
+	}
+
+	&.ng-hide-remove-active {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+
+	&.ng-hide-add {
+		opacity: 1;
+
+		&:nth-child(3) { transition-delay: 0; }
+		&:nth-child(4) { transition-delay: 0; }
+		&:nth-child(5) { transition-delay: 0; }
+		&:nth-child(6) { transition-delay: 0; }
+		&:nth-child(7) { transition-delay: 0; }
+		&:nth-child(8) { transition-delay: 0; }
+	}
+
+	&.ng-hide-add-active {
+		opacity: 0;
+		transition: all 150ms ease-out;
+	}
 }
 
 .count {
@@ -150,11 +189,45 @@
 }
 
 .count-label {
-	display: block;
+	display: block;	
 	font-size: 10px;
 	opacity: .5;
 }
 
 .links {
 	float: right;
+}
+
+.button-link {
+	margin-left: 8px;
+}
+
+.stack-link {
+	transition: all 300ms;
+
+	&.ng-hide-remove {
+		opacity: 0;
+	}
+
+	&.ng-hide-remove-active {
+		opacity: 1;
+	}
+
+	&.ng-hide-add {
+		opacity: 1;
+	}
+
+	&.ng-hide-add-active {
+		opacity: 0;
+	}
+}
+
+.open {
+	.stack-link {
+		opacity: 1;
+	}
+
+	.owner-link {
+		opacity: 1;
+	}
 }

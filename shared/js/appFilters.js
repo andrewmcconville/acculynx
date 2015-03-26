@@ -23,4 +23,13 @@ angular
         return function(text) {
             return $sce.trustAsHtml(text);
         };
-    }]);
+    }])
+    .filter('toYesNo', function(){
+        return function(bool) {
+        	if(bool){
+            	return 'Yes';
+            } else {
+            	return 'No';
+            }
+        };
+    });
