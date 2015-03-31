@@ -16,34 +16,34 @@
             <span class="count">{{question.score || 0}}</span>
             <label class="count-label">Score</label>
         </p>
-        <p class="count-wrapper" ng-show="open">
+        <p class="count-wrapper" ng-show="$index == selectedIndex">
             <span class="count">{{question.is_answered | toYesNo}}</span>
             <label class="count-label">Answered</label>
         </p>
-        <p class="count-wrapper" ng-show="open">
+        <p class="count-wrapper" ng-show="$index == selectedIndex">
             <span class="count">{{question.view_count || 0}}</span>
             <label class="count-label">Views</label>
         </p>
-        <p class="count-wrapper" ng-show="open">
+        <p class="count-wrapper" ng-show="$index == selectedIndex">
             <span class="count">{{question.comment_count || 0}}</span>
             <label class="count-label">Comments</label>
         </p>
-        <p class="count-wrapper" ng-show="open">
+        <p class="count-wrapper" ng-show="$index == selectedIndex">
             <span class="count">{{question.favorite_count || 0}}</span>
             <label class="count-label">Fav's</label>
         </p>
-        <p class="count-wrapper" ng-show="open">
+        <p class="count-wrapper" ng-show="$index == selectedIndex">
             <span class="count">{{question.up_vote_count || 0}}</span>
             <label class="count-label">+Votes</label>
         </p>
-        <p class="count-wrapper" ng-show="open">
+        <p class="count-wrapper" ng-show="$index == selectedIndex">
             <span class="count">{{question.down_vote_count || 0}}</span>
             <label class="count-label">-Votes</label>
         </p>
     </section>
-    <footer class="footer cf">
+    <footer class="footer cf" ng-attr-style="{{$index == selectedIndex ? 'transform: translate3d(0px, 200px, 0px);' : 'transform: none'}}">
         <div class="links">
-            <a ng-show="open" class="stack-link button button-link" href="{{question.link}}" target="_blank" ng-click="$event.stopPropagation()">View on Stack</a>
+            <a ng-show="$index == selectedIndex" class="stack-link button button-link" href="{{question.link}}" target="_blank" ng-click="$event.stopPropagation()">View on Stack</a>
             <a class="owner-link button button-link" ui-sref=".user({user_id: question.owner.user_id})" ng-click="$event.stopPropagation()">User Info</a>
         </div>
     </footer>

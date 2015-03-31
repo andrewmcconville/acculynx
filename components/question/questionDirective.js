@@ -31,29 +31,31 @@ angular
 				}
 			},
 			link: function(scope, element){
+				var height,
+					//open = false,
+					questionHeader = element[0].children[0].children[0],
+					questionBody   = element[0].children[0].children[1],
+					questionCounts = element[0].children[0].children[2],
+					questionFooter = element[0].children[0].children[3];
+
+				height = questionCounts.offsetHeight - questionHeader.offsetHeight;
+				console.log(height);
+				angular.element(questionBody).css({'height': height + 'px'});
+
 				setTimeout(function(){
-					var height,
-						open = true;
-
 					element.bind('click', function(){
-						height = 384 - element[0].children[0].children[0].offsetHeight;
-						open = !open;
+						//body height should be based on header height
+						//height = questionCounts.offsetHeight - questionHeader.offsetHeight;
 
-						if(open){
-							angular.element(element[0].children[0].children[1]).css({'height': 0});
-							angular.element(element[0].children[0].children[3]).css({'transform': ''});
+						if(!$index == selectedIndex){
+							//angular.element(questionBody).css({'height': 0});
+							angular.element(questionFooter).css({'transform': ''});
 						} else {
-							angular.element(element[0].children[0].children[1]).css({'height': height + 'px'});
-							angular.element(element[0].children[0].children[3]).css({'transform': 'translate3d(0, ' + (height + 16) + 'px, 0)'});
+							//angular.element(questionBody).css({'height': height + 'px'});
+							angular.element(questionFooter).css({'transform': 'translate3d(0, ' + (height + 16) + 'px, 0)'});
 						}
-
-						//console.log(element);
-						console.log(height);
-						console.log(
-									'header: ' + element[0].children[0].children[0].offsetHeight + '\n' +
-									'  body: ' + element[0].children[0].children[1].children[0].offsetHeight + '\n' +
-									'footer: ' + element[0].children[0].children[3].offsetHeight
-						);
+						
+						//open = !open;
 					});
 				}, 0);
 			}

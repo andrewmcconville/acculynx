@@ -156,11 +156,9 @@ a {
   background-color: #fff;
   cursor: pointer;
   margin-bottom: 2px;
-  min-height: 135px;
+  min-height: 150px;
   padding: 16px;
   position: relative;
-  -webkit-transition: z-index 300ms;
-          transition: z-index 300ms;
   z-index: 0; }
   .question.open {
     z-index: 1; }
@@ -185,13 +183,12 @@ a {
           transform: translate3d(0, -20px, 0); }
 
 .body {
-  height: 0px;
   margin-left: 72px;
   opacity: 0;
   overflow: hidden;
   position: absolute;
-  -webkit-transition: all 300ms ease-out;
-          transition: all 300ms ease-out;
+  -webkit-transition: all 150ms ease-out;
+          transition: all 150ms ease-out;
   word-break: break-word; }
 
 .open .body {
@@ -202,6 +199,7 @@ a {
           transform: translate3d(0, -20px, 0); }
 
 .counts {
+  height: 384px;
   left: 0;
   position: absolute;
   top: 0;
@@ -216,8 +214,8 @@ a {
           transform: translate3d(-6px, -20px, 0); }
 
 .footer {
-  -webkit-transition: -webkit-transform 300ms ease-out;
-          transition: transform 300ms ease-out; }
+  -webkit-transition: -webkit-transform 150ms ease-out;
+          transition: transform 150ms ease-out; }
 
 .open .footer {
   -webkit-transition: -webkit-transform 300ms ease-out;
@@ -230,7 +228,7 @@ a {
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
   bottom: 0;
-  height: 100%;
+  height: 50%;
   position: absolute;
   width: 100%; }
 
@@ -242,8 +240,8 @@ a {
   position: absolute;
   right: 0;
   top: -40px;
-  -webkit-transition: all 300ms;
-          transition: all 300ms;
+  -webkit-transition: -webkit-transform 150ms;
+          transition: transform 150ms;
   -webkit-transform: scale(0.92, 0.2875);
       -ms-transform: scale(0.92, 0.2875);
           transform: scale(0.92, 0.2875);
@@ -255,8 +253,8 @@ a {
 
 .open .question-expanded-background {
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25);
-  -webkit-transition: all 300ms;
-          transition: all 300ms;
+  -webkit-transition: -webkit-transform 150ms;
+          transition: transform 150ms;
   -webkit-transform: scale(1, 1);
       -ms-transform: scale(1, 1);
           transform: scale(1, 1); }
@@ -668,7 +666,8 @@ a {
 
 html {
   overflow-x: hidden;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   background-color: #f6f1ea;

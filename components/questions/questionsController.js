@@ -4,6 +4,15 @@ angular
 		//true uses local data, false uses stack api
 		var isDebugging = true;
 
+		$scope.selectedIndex;
+		$scope.setIndex = function(i){
+			if($scope.selectedIndex == i){
+				$scope.selectedIndex = -1;
+			} else {
+				$scope.selectedIndex = i;
+			}
+		}
+
 		$scope.getHighScore = function(questions){
 			var highScore = {};
 				highScore.score = questions[0].score;
