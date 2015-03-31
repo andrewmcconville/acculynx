@@ -14,17 +14,19 @@ angular
 			if(!$scope.user){
 				$http
 					.get('https://api.stackexchange.com/2.2/users/' + $stateParams.user_id + '?order=desc&sort=reputation&site=stackoverflow&filter=!0Z-LvgkK8O*AqQeYL95LH0ePl&key=BUjfiSIkQl1FhTfwx0UNqA((')
-					.success(function(data, status, headers, config) {
+					.success(function(data, status, headers, config){
 						$scope.user = data.items[0];
 						if($scope.user.badge_counts){
 							getPastAndPresentBadges($scope.user);
 						}
 					})
-					.error(function(data, status, headers, config) {
+					.error(function(data, status, headers, config){
 					});
 			} else {
 				if($scope.user.badge_counts){
 					getPastAndPresentBadges($scope.user);
+				} else {
+					console.log('no badges');
 				}
 			}
 		}
@@ -32,20 +34,20 @@ angular
 		 * Two calls seem unnecessary
 		 * I could not build a call that returned badge data with dates
 		 */
-		function getPastAndPresentBadges() {
+		function getPastAndPresentBadges(user) {
 			$http
-				.get('https://api.stackexchange.com/2.2/users/' + $scope.user.user_id + '/badges?pagesize=1&order=desc&sort=awarded&site=stackoverflow&filter=!1zSsisdH2jRr_5V6hpPaf&key=BUjfiSIkQl1FhTfwx0UNqA((')
-				.success(function(data, status, headers, config) {
+				.get('https://api.stackexchange.com/2.2/users/' + user.user_id + '/badges?pagesize=1&order=desc&sort=awarded&site=stackoverflow&filter=!1zSsisdH2jRr_5V6hpPaf&key=BUjfiSIkQl1FhTfwx0UNqA((')
+				.success(function(data, status, headers, config){
 					$scope.user.recentBadge = data.items[0];
 				})
-				.error(function(data, status, headers, config) {
+				.error(function(data, status, headers, config){
 				});
 			$http
-				.get('https://api.stackexchange.com/2.2/users/' + $scope.user.user_id + '/badges?pagesize=100&order=desc&max=' + sixMonthsAgo + '&sort=awarded&site=stackoverflow&filter=!SWK)GbIE856CzHm1fM&key=BUjfiSIkQl1FhTfwx0UNqA((')
-				.success(function(data, status, headers, config) {
+				.get('https://api.stackexchange.com/2.2/users/' + user.user_id + '/badges?pagesize=100&order=desc&max=' + sixMonthsAgo + '&sort=awarded&site=stackoverflow&filter=!SWK)GbIE856CzHm1fM&key=BUjfiSIkQl1FhTfwx0UNqA((')
+				.success(function(data, status, headers, config){
 					$scope.user.pastBadges = data.items;
 				})
-				.error(function(data, status, headers, config) {
+				.error(function(data, status, headers, config){
 				});
 		}
 	}]);

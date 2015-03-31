@@ -43,29 +43,11 @@ angular
 
 					height = questionCounts.offsetHeight - questionHeader.offsetHeight;
 					angular.element(questionBody).css({'height': height + 'px'});
-					//angular.element(questionFooter).css({'transform': 'translate3d(0, ' + (height + 32) + 'px, 0)'});
 				};
 
 				scope.setTop = function(){
 					return height + 16;
 				};
-
-				// setTimeout(function(){
-				// 	element.bind('click', function(){
-				// 		//body height should be based on header height
-				// 		//height = questionCounts.offsetHeight - questionHeader.offsetHeight;
-
-				// 		if(!$index == selectedIndex){
-				// 			//angular.element(questionBody).css({'height': 0});
-				// 			angular.element(questionFooter).css({'transform': ''});
-				// 		} else {
-				// 			//angular.element(questionBody).css({'height': height + 'px'});
-				// 			angular.element(questionFooter).css({'transform': 'translate3d(0, ' + (height + 16) + 'px, 0)'});
-				// 		}
-						
-				// 		//open = !open;
-				// 	});
-				// }, 0);
 			}
 		}
 	});

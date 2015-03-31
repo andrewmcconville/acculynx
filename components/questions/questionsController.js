@@ -2,7 +2,7 @@ angular
 	.module('accuchallenge')
 	.controller('questionsCtrl', ['$scope', '$http', '$sce', '$stateParams', 'Users', function($scope, $http, $sce, $stateParams, Users) {
 		//true uses local data, false uses stack api
-		var isDebugging = true;
+		var isDebugging = false;
 
 		$scope.selectedIndex;
 		$scope.setIndex = function(i){
@@ -54,14 +54,14 @@ angular
 		} else {
 			//Live data from stack api
 			$http
-				.get('https://api.stackexchange.com/2.2/questions/?pagesize=100&order=desc&sort=creation&site=stackoverflow&filter=!4y_4z.h_mb5SWrcNcs(5-pP3c2iwOVODJ5G_8j&key=BUjfiSIkQl1FhTfwx0UNqA((')
-				.success(function(data, status, headers, config) {
+				.get('https://api.stackexchange.com/2.2/questions/?pagesize=100&order=desc&sort=creation&site=stackoverflow&filter=!*0OrbsQDBweu_C.jfpV-yV4OYUIROQWTKH.YqiBKS&key=BUjfiSIkQl1FhTfwx0UNqA((')
+				.success(function(data, status, headers, config){
 					$scope.questions = data.items;
 					Users.setUsers(data.items.map(function(questions){return questions.owner;}));
 					$scope.reputationSum = $scope.getReputationSum(data.items);
 					$scope.highScore = $scope.getHighScore(data.items);
 				})
-				.error(function(data, status, headers, config) {
+				.error(function(data, status, headers, config){
 				});
 		}
 	}]);
