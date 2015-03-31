@@ -25,8 +25,6 @@ angular
 			} else {
 				if($scope.user.badge_counts){
 					getPastAndPresentBadges($scope.user);
-				} else {
-					console.log('no badges');
 				}
 			}
 		}
