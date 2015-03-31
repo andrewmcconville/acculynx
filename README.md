@@ -1,13 +1,16 @@
 # acculynx
 Acculynx Coding Challenge
 
+http://andrewmcconville.com/acculynx/stackoverflow
+
 Overall Goal
 Create a website that consumes the Stackoverflow.com API for recent question activity and display information about them.
 
 We expect this to take about 5-8 hours. Please send us whatever you have completed after 1 week. You do not need to have all requirements completed.
 Stackoverflow API
 https://api.stackexchange.com/docs/questions
-Possible Api Calls Needed: https://api.stackexchange.com/2.1/questions?order=desc&sort=activity&site=stackoverflow
+Possible Api Calls Needed:
+https://api.stackexchange.com/2.1/questions?order=desc&sort=activity&site=stackoverflow
 https://api.stackexchange.com/docs/badges-on-users
 
 Things to note
