@@ -214,6 +214,7 @@ a {
           transform: translate3d(-6px, -20px, 0); }
 
 .footer {
+  position: relative;
   -webkit-transition: -webkit-transform 150ms ease-out;
           transition: transform 150ms ease-out; }
 
