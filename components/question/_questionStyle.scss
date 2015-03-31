@@ -3,7 +3,7 @@
 	cursor: pointer;
 	margin-bottom: 2px;
 	min-height: 150px;
-	padding: 16px;
+	padding: 16px 16px 16px 16px;
 	position: relative;
 	z-index: 0;
 
@@ -72,13 +72,6 @@
 
 .footer {
 	transition: transform 150ms ease-out;
-}
-
-.open {
-	.footer {
-		transition: transform 300ms ease-out;
-		transform: translate3d(0, 0, 0);
-	}
 }
 
 .fade-out {
