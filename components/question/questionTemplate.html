@@ -16,27 +16,27 @@
             <span class="count">{{::question.score || 0}}</span>
             <label class="count-label">Score</label>
         </p>
-        <p class="count-wrapper" ng-show="$index == selectedIndex">
-            <span class="count">{{::question.is_answered | toYesNo}}</span>
+        <p class="count-wrapper" ng-if="$index == selectedIndex">
+            <span class="count">{{question.is_answered | toYesNo}}</span>
             <label class="count-label">Answered</label>
         </p>
-        <p class="count-wrapper" ng-show="$index == selectedIndex">
+        <p class="count-wrapper" ng-if="$index == selectedIndex">
             <span class="count">{{question.view_count || 0}}</span>
             <label class="count-label">Views</label>
         </p>
-        <p class="count-wrapper" ng-show="$index == selectedIndex">
+        <p class="count-wrapper" ng-if="$index == selectedIndex">
             <span class="count">{{question.comment_count || 0}}</span>
             <label class="count-label">Comments</label>
         </p>
-        <p class="count-wrapper" ng-show="$index == selectedIndex">
+        <p class="count-wrapper" ng-if="$index == selectedIndex">
             <span class="count">{{question.favorite_count || 0}}</span>
             <label class="count-label">Fav's</label>
         </p>
-        <p class="count-wrapper" ng-show="$index == selectedIndex">
+        <p class="count-wrapper" ng-if="$index == selectedIndex">
             <span class="count">{{question.up_vote_count || 0}}</span>
             <label class="count-label">+Votes</label>
         </p>
-        <p class="count-wrapper" ng-show="$index == selectedIndex">
+        <p class="count-wrapper" ng-if="$index == selectedIndex">
             <span class="count">{{question.down_vote_count || 0}}</span>
             <label class="count-label">-Votes</label>
         </p>
