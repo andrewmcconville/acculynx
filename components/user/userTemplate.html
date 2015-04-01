@@ -5,7 +5,9 @@
 <div class="user-modal">
 	<header class="profile-header">
 		<div class="background background-mobile"></div>
-		<div class="background background-blur" style="background-image: url({{user.profile_image}})"></div>
+		<div class="background">
+			<div class="background-blur" style="background-image: url({{user.profile_image}})"></div>
+		</div>
 		<p class="user-name">
 			<a href="{{user.link}}" target="_blank">{{user.display_name || 'Unknown User'}}</a>
 		</p>

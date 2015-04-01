@@ -1,6 +1,6 @@
 <div class="question-content">
     <header class="header cf">
-        <p class="owner-name">{{question.owner.display_name}} <span class="by-label">posted:</span></p>
+        <p class="owner-name">{{::question.owner.display_name}} <span class="by-label">posted:</span></p>
         <h2 class="question-title" ng-bind-html="question.title | toHTML" target="_blank"></h2>
     </header>
     <section class="body">
@@ -9,15 +9,15 @@
     </section>
     <section class="counts">
         <p class="count-wrapper">
-            <span class="count">{{question.answer_count || 0}}</span>
+            <span class="count">{{::question.answer_count || 0}}</span>
             <label class="count-label">Answers</label>
         </p>
         <p class="count-wrapper">
-            <span class="count">{{question.score || 0}}</span>
+            <span class="count">{{::question.score || 0}}</span>
             <label class="count-label">Score</label>
         </p>
         <p class="count-wrapper" ng-show="$index == selectedIndex">
-            <span class="count">{{question.is_answered | toYesNo}}</span>
+            <span class="count">{{::question.is_answered | toYesNo}}</span>
             <label class="count-label">Answered</label>
         </p>
         <p class="count-wrapper" ng-show="$index == selectedIndex">

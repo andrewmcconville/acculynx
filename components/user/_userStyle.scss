@@ -89,6 +89,7 @@
 
 .background-blur {
 	display: none;
+	height: 100%;
 
 	@media(min-width: 1024px){
 		display: block;
@@ -102,7 +103,6 @@
 	bottom: 0;
 	font-size: 30px;
 	left: 12px;
-	opacity: 1;
 	overflow: hidden;
 	position: absolute;
 	text-overflow: ellipsis;
@@ -133,6 +133,7 @@
 	position: absolute;
 	right: 20px;
 	width: 100px;
+	z-index: 1;
 
 	@media(min-width: 480px){
 		right: 40px;

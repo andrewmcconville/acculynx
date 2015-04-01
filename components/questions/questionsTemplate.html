@@ -7,24 +7,24 @@
 		<span class="data">
 			"<span ng-bind-html="highScore.title | toHTML"></span>"
 			<span class="break-on-1024">
-				<label class="inline-label">by:</label> {{highScore.owner}},
+				<label class="inline-label">by:</label> {{::highScore.owner}},
 			</span>
 			<span class="break-on-1024">
-				<label class="inline-label">for:</label> {{highScore.score}} Points,
+				<label class="inline-label">for:</label> {{::highScore.score}} Points,
 			</span>
 			<span class="break-on-1024">
-				<label class="inline-label">tied with:</label> {{highScore.ties == 0 ? 'No One!' : highScore.ties + ' Others'}}
+				<label class="inline-label">tied with:</label> {{::highScore.ties == 0 ? 'No One!' : highScore.ties + ' Others'}}
 			</span>
 		</span>
  	</p>
     <p>
     	<label class="label">Reputation Sum:</label>
-    	<span class="data">{{reputationSum | number}}</span>
+    	<span class="data">{{::reputationSum | number}}</span>
     </p>
 </aside>
 
 <ul class="questions">
-    <li class="question cf" question ng-repeat="question in questions" ng-click="getQuestionDetails(question.question_id); setIndex($index);" ng-class="{open: $index == selectedIndex}"></li>
+    <li class="question cf" question ng-repeat="question in questions" ng-click="setIndex($index); getQuestionDetails(question.question_id);" ng-class="{open: $index == selectedIndex}"></li>
 </ul>
 
 <aside class="sidebar acculynx-meta" acculynx-meta></aside>
