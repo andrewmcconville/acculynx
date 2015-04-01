@@ -41,7 +41,14 @@
             <label class="count-label">-Votes</label>
         </p>
     </section>
-    <footer class="footer cf" ng-attr-style="{{$index == selectedIndex ? 'transform: translate3d(0px, ' + setTop() + 'px, 0px); -webkit-transform: translate3d(0px, ' + setTop() + 'px, 0px);' : 'transform: none; -webkit-transform: none;'}}">
+<!--<footer class="footer cf" ng-attr-style="{{$index == selectedIndex ? 'transform: translate3d(0px, ' + setTop() + 'px, 0px); -webkit-transform: translate3d(0px, ' + setTop() + 'px, 0px);' : 'transform: none; -webkit-transform: none;'}}">-->   
+
+    <footer class="footer footer-closed cf" ng-if="$index != selectedIndex">
+        <div class="links">
+            <a class="owner-link button button-link" ui-sref=".user({user_id: question.owner.user_id})" ng-click="$event.stopPropagation()">User Info</a>
+        </div>
+    </footer>
+    <footer class="footer footer-open cf" ng-if="$index == selectedIndex">
         <div class="links">
             <a ng-show="$index == selectedIndex" class="stack-link button button-link" href="{{question.link}}" target="_blank" ng-click="$event.stopPropagation()">View on Stack</a>
             <a class="owner-link button button-link" ui-sref=".user({user_id: question.owner.user_id})" ng-click="$event.stopPropagation()">User Info</a>

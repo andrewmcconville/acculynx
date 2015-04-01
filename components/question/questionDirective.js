@@ -45,9 +45,9 @@ angular
 					angular.element(questionBody).css({'height': height + 'px'});
 				};
 
-				scope.setTop = function(){
-					return height + 16;
-				};
+				// scope.setTop = function(){
+				// 	return height + 16;
+				// };
 			}
 		}
 	});
